@@ -1,3 +1,12 @@
+:root {
+    --text-color: #eaeaea;
+    --bg-color: #040f16;
+    --penn-blue: #001242;
+    --lapislazuli: #005e7c;
+    --blue: #0094c6;
+    --black: #040f16;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,4 +14,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
