@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  saludo: string = ""
+  
+  constructor(private personaService: PersonaService){
+    personaService.getSaludo().subscribe((resp: any) => this.saludo = resp.mensaje)
+  }
 }
