@@ -1,0 +1,28 @@
+.container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-200px);
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.title h1 {
+    font-size: 3rem;
+}
+
+.title h4 {
+    font-weight: 300;
+}
