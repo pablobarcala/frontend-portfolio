@@ -21,8 +21,10 @@
 
 .title h1 {
     font-size: 3rem;
+    text-align: center;
 }
 
 .title h4 {
+    font-size: 1rem;
     font-weight: 300;
 }
