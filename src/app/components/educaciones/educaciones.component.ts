@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Educacion } from 'src/app/interfaces/Educacion';
+import { Educaciones } from 'src/app/interfaces/mock-educaciones';
 
 @Component({
   selector: 'app-educaciones',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./educaciones.component.css']
 })
 export class EducacionesComponent {
-
+  educaciones: Educacion[] = Educaciones
 }

@@ -1,1 +1,6 @@
-<p>educacion-item works!</p>
+<div>
+    <p>{{educacion.titulo}}</p>
+    <p>{{educacion.lugar}}</p>
+    <p *ngIf="educacion.enProgreso">En progreso</p>
+    <p *ngIf="!educacion.enProgreso">Finalizado</p>
+</div>
