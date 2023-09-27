@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class PersonaService {
-  apiUrl: string = "http://66.97.47.250:8080"
+  apiUrl: string = "https://vps-3631176-x.dattaweb.com:8443"
 
   constructor(private http: HttpClient) { }
 
