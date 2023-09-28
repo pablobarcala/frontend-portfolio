@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from 'src/app/interfaces/Persona';
 import { PersonaService } from 'src/app/services/persona.service';
 
 @Component({
@@ -8,8 +9,10 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class HeaderComponent {
   saludo: string = ""
+  personas: Persona[] = []
   
   constructor(private personaService: PersonaService){
     personaService.getSaludo().subscribe((resp: any) => this.saludo = resp.mensaje)
+    personaService.getPersonas().subscribe((resp: any) => this.personas = resp)
   }
 }

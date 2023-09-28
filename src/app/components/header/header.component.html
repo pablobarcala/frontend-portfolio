@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="title">
-        <h1>Pablo Damián Barcala</h1>
-        <h4>Desarrollador Full Stack</h4>
-        <p>{{saludo}}</p>
+    <div *ngFor="let persona of personas" class="title">
+        <h1>{{persona.nombre}} {{persona.apellido}}</h1>
+        <h4>{{persona.titulo}}</h4>
+        <p>{{persona.descripcion}}</p>
     </div>
 </div>
