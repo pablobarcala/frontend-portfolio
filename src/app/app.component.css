@@ -1,5 +1,6 @@
 div {
     background-color: var(--bg-color);
+    border-radius: 10px;
     height: calc(100vh - 30px);
 }
 
