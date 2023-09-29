@@ -1,4 +1,11 @@
 <div class="container">
+    <div class="opciones">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
+            <line x1="3" y1="15" [attr.x2]="x2" y2="15" stroke="var(--text-color)" stroke-width="3" stroke-linecap="round" />
+            <line x1="3" y1="7.5" [attr.x2]="x2" y2="7.5" stroke="var(--text-color)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="3" y1="22.5" [attr.x2]="x2" y2="22.5" stroke="var(--text-color)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+    </div>
     <div *ngFor="let persona of personas" class="title">
         <h1>{{persona.nombre}} {{persona.apellido}}</h1>
         <h4>{{persona.titulo}}</h4>

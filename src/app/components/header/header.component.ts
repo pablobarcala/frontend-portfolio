@@ -10,7 +10,6 @@ import { PersonaService } from 'src/app/services/persona.service';
 export class HeaderComponent {
   saludo: string = ""
   personas: Persona[] = []
-  letras: string[] = ['P', 'a', 'b', 'l', 'o']
   
   constructor(private personaService: PersonaService){
     personaService.getSaludo().subscribe((resp: any) => this.saludo = resp.mensaje)
@@ -19,5 +18,15 @@ export class HeaderComponent {
 
   convertirArray(texto: any): string[]{
     return texto.split('');
+  }
+
+  x2: number = 30
+  
+  onMouseOver() {
+    this.x2 = 20
+  }
+
+  onMouseOut() {
+    this.x2 = 30;
   }
 }
