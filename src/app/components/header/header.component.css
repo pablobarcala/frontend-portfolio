@@ -1,30 +1,29 @@
 .container {
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-200px);
+h1 {
+    font-size: 2.5rem;
+    transform: translateX(-100%);
     animation: slideIn 1s forwards;
 }
 
-@keyframes slideIn {
-    to {
-        transform: translateY(0);
-    }
-}
-
-.title h1 {
-    font-size: 3rem;
-    text-align: center;
-}
-
-.title h4 {
+h4 {
     font-size: 1rem;
-    font-weight: 300;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(3%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }

@@ -14,13 +14,30 @@
 }
 
 body {
+    padding: 15px;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
     color: var(--text-color);
+    background: linear-gradient(60deg, var(--blue), var(--penn-blue), var(--blue));
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
 }
 
 @media (max-width: 500px) {
     :root {
         font-size: 12px;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
+
+@keyframes gradient {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
     }
 }

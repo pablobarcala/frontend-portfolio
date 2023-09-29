@@ -1,0 +1,10 @@
+div {
+    background-color: var(--bg-color);
+    height: calc(100vh - 30px);
+}
+
+@media (max-width: 500px) {
+    div {
+        height: calc(100vh - 20px);
+    }
+}
