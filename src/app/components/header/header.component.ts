@@ -16,17 +16,13 @@ export class HeaderComponent {
     personaService.getPersonas().subscribe((resp: any) => this.personas = resp)
   }
 
-  convertirArray(texto: any): string[]{
-    return texto.split('');
-  }
-
-  x2: number = 30
-  
   onMouseOver() {
-    this.x2 = 20
+    const rect3 = document.getElementById("rect-3")
+    rect3?.setAttribute("style", "width: 30px; transition: width 0.3s ease")
   }
 
   onMouseOut() {
-    this.x2 = 30;
+    const rect3 = document.getElementById("rect-3")
+    rect3?.setAttribute("style", "width: 20px; transition: width 0.3s ease")
   }
 }
