@@ -1,7 +1,3 @@
-.container {
-    padding: 30px;
-}
-
 .opciones {
     --icon-color: var(--text-color);
 }
@@ -23,10 +19,6 @@ h4 {
 /* ---------- PARA MOVILES ---------- */
 
 @media (max-width: 500px) {
-    .container {
-        padding: 15px;
-    }
-
     .title {
         text-align: center;
     }

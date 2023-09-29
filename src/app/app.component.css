@@ -1,16 +1,12 @@
-div {
+.container {
     background-color: var(--bg-color);
+    padding: 20px;
     border-radius: 10px;
-    height: calc(100vh - 30px);
-    overflow: auto;
-}
-
-div::-webkit-scrollbar{
-    display: none;
+    overflow: hidden;
 }
 
 @media (max-width: 500px) {
-    div {
-        height: calc(100vh - 20px);
+    .container {
+        padding: 15px;
     }
 }
