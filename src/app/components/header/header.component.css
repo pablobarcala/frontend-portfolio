@@ -6,7 +6,7 @@
     --icon-color: var(--text-color);
 }
 
-.opciones svg{
+.opciones svg, rect{
     cursor: pointer;
 }
 
@@ -18,18 +18,6 @@ h1 {
 h4 {
     animation: slideX 1.5s ease forwards;
     font-size: 1rem;
-}
-
-.cursor {
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border: 2px solid #fff; /* Color del borde del círculo */
-    border-radius: 50%; /* Para hacerlo circular */
-    position: absolute;
-    transform: translate(-50%, -50%); /* Centra el círculo en el cursor */
-    pointer-events: none; /* Evita que el círculo interfiera con los clics */
-    display: none;
 }
 
 /* ---------- PARA MOVILES ---------- */
