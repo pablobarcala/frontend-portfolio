@@ -6,6 +6,7 @@
     --blue: #0094c6;
     --black: #040f16;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -14,12 +15,13 @@
 }
 
 body {
+    top: 0;
+    left: -100;
     padding: 15px;
-    font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
-    background: linear-gradient(60deg, var(--blue), var(--penn-blue), var(--blue));
+    background: linear-gradient(-50deg, var(--blue), var(--penn-blue), var(--blue));
     background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 8s linear infinite;
+    color: var(--text-color);
 }
 
 @media (max-width: 500px) {
