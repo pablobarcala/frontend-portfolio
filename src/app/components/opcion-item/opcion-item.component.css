@@ -1,0 +1,31 @@
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+li > svg {
+    position: absolute;
+}
+
+li > span {
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+#rect,
+span {
+    transition: all 0.2s ease;
+}
+
+li:hover #rect {
+    transform: translateY(-25%);
+    width: 90%;
+    height: 90%;
+}
+
+li:hover span {
+    color: var(--bg-color);
+    z-index: 1;
+    font-weight: 600;
+}
