@@ -1,12 +1,24 @@
 :root {
-    --text-color: #eaeaea;
-    --bg-color: #040f16;
-    --penn-blue: #001242;
-    --lapislazuli: #005e7c;
-    --blue: #0094c6;
-    --black: #040f16;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
+}
+
+:root.dark {
+    --text-color: #eaeaea;
+    --bg-color: #040f16;
+    --dark-color: #001242;
+    --medium-color: #005e7c;
+    --light-color: #0094c6;
+    --theme: #040f16;
+}
+
+:root.light {
+    --text-color: #050404;
+    --bg-color: #eaeaea;
+    --dark-color: #1f0322;
+    --medium-color: #4A1942;
+    --light-color: #8a1c7c;
+    --theme: #eaeaea;
 }
 
 * {
@@ -19,7 +31,7 @@ body {
     top: 0;
     left: -100;
     padding: 15px;
-    background: linear-gradient(-50deg, var(--blue), var(--penn-blue), var(--blue));
+    background: linear-gradient(-50deg, var(--light-color), var(--dark-color), var(--light-color));
     background-size: 200% 200%;
     animation: gradient 8s linear infinite;
     color: var(--text-color);
