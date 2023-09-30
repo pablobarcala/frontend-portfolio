@@ -1,6 +1,6 @@
 .container {
     overflow: auto;
-    height: calc(91vh);
+    height: calc(90vh);
 }
 
 .container::-webkit-scrollbar {
@@ -17,10 +17,4 @@
     transform: translate(-50%, -50%); /* Centra el círculo en el cursor */
     pointer-events: none; /* Evita que el círculo interfiera con los clics */
     display: none;
-}
-
-@media (max-width: 500px) {
-    .container {
-        height: calc(93vh);
-    }
 }

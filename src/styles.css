@@ -25,6 +25,10 @@ body {
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 @media (max-width: 500px) {
     :root {
         font-size: 12px;
