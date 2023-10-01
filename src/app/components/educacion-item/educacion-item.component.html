@@ -1,6 +1,8 @@
 <div>
     <p>{{educacion.titulo}}</p>
     <p>{{educacion.lugar}}</p>
-    <p *ngIf="educacion.enProgreso">En progreso</p>
-    <p *ngIf="!educacion.enProgreso">Finalizado</p>
+    <span [ngSwitch]="educacion.enProgreso">
+        <p *ngSwitchCase="true">En progreso</p>
+        <p *ngSwitchCase="false">Finalizado</p>
+    </span>
 </div>
