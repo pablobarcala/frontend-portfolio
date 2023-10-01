@@ -1,6 +1,11 @@
 <div class="container">
     <div class="cursor" id="follower"></div>
     <app-header></app-header>
-    <app-persona></app-persona>
-    <app-opciones></app-opciones>
+    <div class="main">
+        <app-persona></app-persona>
+        <app-opciones></app-opciones>
+        <div class="seccion" [ngSwitch]="navOpcion">
+            <app-educaciones *ngSwitchCase="'Educacion'"></app-educaciones>
+        </div>
+    </div>
 </div>

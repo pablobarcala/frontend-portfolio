@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { NavService } from 'src/app/services/nav.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,13 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
+  navOpcion: string = ''
+
+  constructor(
+    private navService: NavService
+  ){
+    navService.getNavOpcion().subscribe(nav => this.navOpcion = nav)
+  }
 
   ngAfterViewInit() {
     this.seguirCursor()
