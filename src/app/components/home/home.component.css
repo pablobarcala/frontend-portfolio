@@ -1,9 +1,12 @@
 .container {
+    display: flex;
+    flex-direction: column;
     overflow: auto;
-    height: calc(90vh);
+    height: 90vh;
 }
 
-.container::-webkit-scrollbar {
+.container::-webkit-scrollbar,
+.seccion-nav::-webkit-scrollbar {
     display: none;
 }
 
@@ -11,10 +14,40 @@
     width: 10px;
     height: 10px;
     background-color: transparent;
-    border: 2px solid var(--text-color); /* Color del borde del círculo */
-    border-radius: 50%; /* Para hacerlo circular */
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%); /* Centra el círculo en el cursor */
     pointer-events: none; /* Evita que el círculo interfiera con los clics */
     display: none;
+}
+
+app-header {
+    position: sticky;
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 20px var(--bg-color);
+    top: 0;
+}
+
+.main {
+    display: flex;
+    flex-grow: 1;
+}
+
+.seccion-nav {
+    position: sticky;
+    top: 60px;
+    width: 45%;
+    height: 60vh;
+    overflow-y: auto;
+}
+
+.seccion-seleccionada {
+    width: 55%;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.seccion-seleccionada.debajo-header {
+    opacity: 0;
 }
