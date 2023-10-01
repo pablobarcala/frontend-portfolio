@@ -1,9 +1,22 @@
 .opciones {
-    --icon-color: var(--text-color);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    justify-content: space-between;
 }
 
-.opciones svg, rect{
+.opciones svg,
+.theme,
+rect{
     cursor: pointer;
+}
+
+.opciones svg {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
 }
 
 h1 {
@@ -16,9 +29,22 @@ h4 {
     font-size: 1rem;
 }
 
+span.nav-opcion{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+span.nav-opcion.en-transicion {
+    animation: girar 1s ease forwards;
+}
+
 /* ---------- PARA MOVILES ---------- */
 
 @media (max-width: 500px) {
+    .opciones svg {
+        display: block;
+    }
+
     .title {
         text-align: center;
     }
@@ -64,5 +90,15 @@ h4 {
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes girar {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg);
     }
 }
