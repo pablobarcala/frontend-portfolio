@@ -9,6 +9,7 @@ import { EducacionesComponent } from './components/educaciones/educaciones.compo
 import { EducacionItemComponent } from './components/educacion-item/educacion-item.component';
 import { OpcionesComponent } from './components/opciones/opciones.component';
 import { OpcionItemComponent } from './components/opcion-item/opcion-item.component';
+import { PersonaComponent } from './components/persona/persona.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OpcionItemComponent } from './components/opcion-item/opcion-item.compon
     EducacionesComponent,
     EducacionItemComponent,
     OpcionesComponent,
-    OpcionItemComponent
+    OpcionItemComponent,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,63 +1,57 @@
 <div class="container">
-    <div class="opciones">
-        <div class="menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
-                <rect 
-                    x="0" 
-                    y="5" 
-                    width="30px" 
-                    height="3px" 
-                    rx="3" 
-                    ry="3" 
-                    opacity="1" 
-                    fill="var(--text-color)" 
-                    stroke-width="3"
-                />
-                <rect 
-                    x="0" 
-                    y="15" 
-                    width="30px" 
-                    height="3px" 
-                    rx="3" 
-                    ry="3" 
-                    opacity="1" 
-                    fill="var(--text-color)" 
-                    stroke-width="3"
-                />
-                <rect 
-                    id="rect-3"
-                    x="0" 
-                    y="25" 
-                    width="20px" 
-                    height="3px" 
-                    rx="3" 
-                    ry="3" 
-                    opacity="1" 
-                    fill="var(--text-color)" 
-                    stroke-width="3"
-                />
-            </svg>
-            <img 
-                class="theme"
-                *ngIf="theme === 'dark'" 
-                width="30px"
-                src="../../../assets/light-mode.png" 
-                alt="Light mode" 
-                (click)="toggleTheme()"
-            >
-            <img 
-                class="theme"
-                *ngIf="theme === 'light'" 
-                width="30px"
-                src="../../../assets/night-mode.png" 
-                alt="Dark mode" 
-                (click)="toggleTheme()"
-            >
-        </div>
-        <span class="nav-opcion" [ngClass]="{'en-transicion': enTransicion}">{{navOpcion}}</span>
+    <div class="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
+            <rect 
+                x="0" 
+                y="5" 
+                width="30px" 
+                height="3px" 
+                rx="3" 
+                ry="3" 
+                opacity="1" 
+                fill="var(--text-color)" 
+                stroke-width="3"
+            />
+            <rect 
+                x="0" 
+                y="15" 
+                width="30px" 
+                height="3px" 
+                rx="3" 
+                ry="3" 
+                opacity="1" 
+                fill="var(--text-color)" 
+                stroke-width="3"
+            />
+            <rect 
+                id="rect-3"
+                x="0" 
+                y="25" 
+                width="20px" 
+                height="3px" 
+                rx="3" 
+                ry="3" 
+                opacity="1" 
+                fill="var(--text-color)" 
+                stroke-width="3"
+            />
+        </svg>
+        <img 
+            class="theme"
+            *ngIf="theme === 'dark'" 
+            width="30px"
+            src="../../../assets/light-mode.png" 
+            alt="Light mode" 
+            (click)="toggleTheme()"
+        >
+        <img 
+            class="theme"
+            *ngIf="theme === 'light'" 
+            width="30px"
+            src="../../../assets/night-mode.png" 
+            alt="Dark mode" 
+            (click)="toggleTheme()"
+        >
     </div>
-    <div *ngFor="let persona of personas" class="title">
-        <h1>{{persona.nombre}} {{persona.apellido}}</h1>
-        <h4>{{persona.titulo}}</h4>
-    </div>
+    <span class="nav-opcion" [ngClass]="{'en-transicion': enTransicion}">{{navOpcion}}</span>
 </div>

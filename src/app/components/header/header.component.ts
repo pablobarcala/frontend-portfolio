@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Persona } from 'src/app/interfaces/Persona';
 import { NavService } from 'src/app/services/nav.service';
-import { PersonaService } from 'src/app/services/persona.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -13,16 +11,11 @@ export class HeaderComponent {
   navOpcion: string = ""
   enTransicion: boolean = true
   theme: string = 'dark'
-  saludo: string = ""
-  personas: Persona[] = []
   
   constructor(
-    private personaService: PersonaService, 
     private themeService: ThemeService,
     private navService: NavService
   ){
-    personaService.getSaludo().subscribe((resp: any) => this.saludo = resp.mensaje)
-    personaService.getPersonas().subscribe((resp: any) => this.personas = resp)
     navService.getNavOpcion().subscribe(resp => this.navOpcion = resp)
     navService.getTransicion().subscribe(resp => this.enTransicion = resp)
     themeService.getTheme().subscribe(resp => this.theme = resp)
