@@ -35,7 +35,6 @@ body {
     background-size: 200% 200%;
     animation: gradient 8s linear infinite;
     color: var(--text-color);
-    height: 100vh;
 }
 
 body::-webkit-scrollbar {
