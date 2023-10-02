@@ -52,3 +52,22 @@ app-header {
 .seccion-seleccionada.debajo-header {
     opacity: 0;
 }
+
+@media (max-width: 500px) {
+    app-opciones {
+        display: none;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .seccion-seleccionada,
+    .seccion-nav {
+        width: 100%;
+    }
+
+    .seccion-nav {
+        height: 70px;
+    }
+}

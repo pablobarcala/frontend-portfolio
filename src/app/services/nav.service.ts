@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class NavService {
-  navOpcion: BehaviorSubject<string> = new BehaviorSubject<string>("Inicio");
+  navOpcion: BehaviorSubject<string> = new BehaviorSubject<string>("Educacion");
   transicion: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() { }

@@ -28,7 +28,12 @@ rect{
     justify-content: space-between;
 }
 
-.icons > .social > a {
+.social-celu {
+    display: none;
+}
+
+.icons > .social-pc > a,
+.social-celu > a {
     padding-left: 20px;
 }
 
@@ -44,8 +49,22 @@ span.nav-opcion.en-transicion {
 /* ---------- PARA MOVILES ---------- */
 
 @media (max-width: 500px) {
-    .opciones svg {
+    .container > .menu > svg {
         display: block;
+    }
+
+    .container {
+        grid-template-columns: 30% 50% 20%;
+    }
+
+    .social-pc {
+        display: none;
+    }
+
+    .social-celu {
+        display: flex;
+        justify-content: flex-end;
+        transform: translateY(25%);
     }
 }
 
