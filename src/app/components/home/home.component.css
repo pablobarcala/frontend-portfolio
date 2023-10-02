@@ -54,9 +54,9 @@ app-header {
 }
 
 @media (max-width: 500px) {
-    app-opciones {
+    /* app-opciones {
         display: none;
-    }
+    } */
 
     .main {
         flex-direction: column;
@@ -67,8 +67,8 @@ app-header {
         width: 100%;
     }
 
-    .seccion-nav {
+    /* .seccion-nav {
         height: 70px;
         padding-bottom: 20px;
-    }
+    } */
 }
