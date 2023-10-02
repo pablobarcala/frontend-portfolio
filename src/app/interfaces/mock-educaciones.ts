@@ -4,13 +4,13 @@ export const Educaciones: Educacion[] = [
     {
         id: "0",
         titulo: "Desarrollador de software",
-        lugar: "UNSTA",
-        enProgreso: true
+        nombreInstituto: "UNSTA",
+        en_progreso: true
     },
     {
         id: "1",
         titulo: "Productor de seguros",
-        lugar: "FAPASA",
-        enProgreso: false
+        nombreInstituto: "FAPASA",
+        en_progreso: false
     }
 ]

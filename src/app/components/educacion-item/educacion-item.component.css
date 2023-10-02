@@ -1,3 +1,11 @@
 div {
     padding: 20px 0;
 }
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h4 > span {
+    font-weight: 400;
+}

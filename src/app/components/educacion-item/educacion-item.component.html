@@ -1,7 +1,7 @@
 <div>
-    <p>{{educacion.titulo}}</p>
-    <p>{{educacion.lugar}}</p>
-    <span [ngSwitch]="educacion.enProgreso">
+    <h4>Lugar: <span>{{educacion.nombreInstituto}}</span></h4>
+    <h4>Titulo: <span>{{educacion.titulo}}</span></h4>
+    <span [ngSwitch]="educacion.en_progreso">
         <p *ngSwitchCase="true">En progreso</p>
         <p *ngSwitchCase="false">Finalizado</p>
     </span>
