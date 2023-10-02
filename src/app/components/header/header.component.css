@@ -38,7 +38,7 @@ rect{
 }
 
 span.nav-opcion{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
@@ -54,7 +54,11 @@ span.nav-opcion.en-transicion {
     }
 
     .container {
-        grid-template-columns: 30% 50% 20%;
+        grid-template-columns: 30% 30% 30%;
+    }
+
+    .icons {
+        padding-right: 0;
     }
 
     .social-pc {
@@ -62,9 +66,13 @@ span.nav-opcion.en-transicion {
     }
 
     .social-celu {
+        right: 0;
         display: flex;
         justify-content: flex-end;
-        transform: translateY(25%);
+    }
+    
+    .social-celu svg {
+        transform: translateY(20%);
     }
 }
 

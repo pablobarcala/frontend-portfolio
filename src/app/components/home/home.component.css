@@ -69,5 +69,6 @@ app-header {
 
     .seccion-nav {
         height: 70px;
+        padding-bottom: 20px;
     }
 }
