@@ -1,8 +1,9 @@
 export interface Educacion {
     id?: string;
     titulo?: string;
-    lugar?: string;
-    fechaInicio?: string;
-    fechaFinal?: string;
-    enProgreso?: boolean;
+    nombreInstituto?: string;
+    fecha_inicio?: string;
+    fecha_fin?: string;
+    en_progreso?: boolean;
+    descripcion?: string;
 }
