@@ -9,10 +9,6 @@ export class PersonaService {
 
   constructor(private http: HttpClient) { }
 
-  getSaludo() {
-    return this.http.get(this.apiUrl + "/saludo/getSaludo")
-  }
-
   getPersonas() {
     return this.http.get(this.apiUrl + "/personas/traer")
   }
