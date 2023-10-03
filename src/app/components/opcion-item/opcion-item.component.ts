@@ -9,9 +9,13 @@ import { NavService } from 'src/app/services/nav.service';
 export class OpcionItemComponent {
   @Input() opcion: string = ""
 
+  selected: string = ''
+
   constructor(
     private navService: NavService
-  ){}
+  ){
+    navService.getNavOpcion().subscribe(resp => this.selected = resp)
+  }
 
   navegar(opcion: string) {
     this.navService.navegar(opcion)

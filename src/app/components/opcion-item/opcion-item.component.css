@@ -18,13 +18,15 @@ span {
     transition: all 0.2s ease;
 }
 
-li:hover #rect {
+li:hover #rect,
+li.selected #rect{
     transform: translateY(-25%);
     width: 90%;
     height: 90%;
 }
 
-li:hover span {
+li:hover span,
+li.selected span{
     color: var(--bg-color);
     z-index: 1;
     font-weight: 600;
