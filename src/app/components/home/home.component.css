@@ -6,8 +6,7 @@
     background-size: 200% 200%;
     animation: gradient 8s linear infinite;
     color: var(--text-color);
-    min-height: calc(100vh - 30px);
-    max-height: calc(100vh - 30px);
+    height: calc(100vh - 30px);
 }
 
 .container {
@@ -78,6 +77,7 @@ app-header {
 
     .container {
         padding: 15px;
+        padding-top: 0;
     }
 
     /* app-opciones {
