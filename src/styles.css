@@ -27,36 +27,8 @@
     cursor: default;
 }
 
-body {
-    top: 0;
-    left: -100;
-    padding: 15px;
-    background: linear-gradient(-50deg, var(--light-color), var(--dark-color), var(--light-color));
-    background-size: 200% 200%;
-    animation: gradient 8s linear infinite;
-    color: var(--text-color);
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
 @media (max-width: 500px) {
     :root {
         font-size: 12px;
-    }
-
-    body {
-        padding: 10px;
-    }
-}
-
-@keyframes gradient {
-    0%, 100% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 100% 100%;
     }
 }
