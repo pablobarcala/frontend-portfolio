@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { RoutingModule } from './modules/routing/routing.module';
+import { AdminModule } from './modules/admin/admin.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -24,7 +26,9 @@ import { PersonaComponent } from './components/persona/persona.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]
