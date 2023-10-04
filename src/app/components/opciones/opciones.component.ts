@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./opciones.component.css']
 })
 export class OpcionesComponent {
-  opciones: string[] = ["Inicio", "Proyectos", "Educacion", "Experiencia", "Tecnologías"];
+  opciones: string[] = ["Inicio", "Proyectos", "Experiencia", "Tecnologías", "Educacion", "Contacto"];
 }
