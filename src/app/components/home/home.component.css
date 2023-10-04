@@ -76,6 +76,7 @@ app-header {
     }
 
     .container {
+        height: calc(100vh - 210px);
         padding: 15px;
         padding-top: 0;
     }
