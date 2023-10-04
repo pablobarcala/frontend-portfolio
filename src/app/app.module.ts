@@ -12,6 +12,8 @@ import { EducacionItemComponent } from './components/educacion-item/educacion-it
 import { OpcionesComponent } from './components/opciones/opciones.component';
 import { OpcionItemComponent } from './components/opcion-item/opcion-item.component';
 import { PersonaComponent } from './components/persona/persona.component';
+import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
+import { TecnologiaItemComponent } from './components/tecnologia-item/tecnologia-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PersonaComponent } from './components/persona/persona.component';
     EducacionItemComponent,
     OpcionesComponent,
     OpcionItemComponent,
-    PersonaComponent
+    PersonaComponent,
+    TecnologiasComponent,
+    TecnologiaItemComponent
   ],
   imports: [
     BrowserModule,
