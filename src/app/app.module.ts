@@ -14,6 +14,7 @@ import { OpcionItemComponent } from './components/opcion-item/opcion-item.compon
 import { PersonaComponent } from './components/persona/persona.component';
 import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
 import { TecnologiaItemComponent } from './components/tecnologia-item/tecnologia-item.component';
+import { PersonaInicioComponent } from './components/persona-inicio/persona-inicio.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TecnologiaItemComponent } from './components/tecnologia-item/tecnologia
     OpcionItemComponent,
     PersonaComponent,
     TecnologiasComponent,
-    TecnologiaItemComponent
+    TecnologiaItemComponent,
+    PersonaInicioComponent
   ],
   imports: [
     BrowserModule,
