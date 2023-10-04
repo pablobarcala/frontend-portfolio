@@ -6,6 +6,19 @@ h4 {
     font-size: 1.5rem;
 }
 
-h4 > span {
-    font-weight: 400;
+.instituto {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.separate {
+    padding: 0;
+    width: 30%;
+    margin-bottom: 15px;
+    border: solid 0.5px var(--text-color);
+}
+
+span > p {
+    font-weight: 200;
+    margin: 5px 0;
 }
