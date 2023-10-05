@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const Educaciones = [{\n  id: \"0\",\n  titulo: \"Desarrollador de software\",\n  nombreInstituto: \"UNSTA\",\n  en_progreso: true\n}, {\n  id: \"1\",\n  titulo: \"Productor de seguros\",\n  nombreInstituto: \"FAPASA\",\n  en_progreso: false\n}];","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

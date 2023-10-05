@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const Tecnologias = [{\n  id: 0,\n  nombreTecnologia: \"HTML\",\n  porcentaje: 90\n}];","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
