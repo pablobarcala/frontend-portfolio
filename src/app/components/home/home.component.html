@@ -9,6 +9,8 @@
             </div>
             <div class="seccion-seleccionada" [ngSwitch]="navOpcion">
                 <app-persona-inicio *ngSwitchCase="'Inicio'"></app-persona-inicio>
+                <app-proyectos *ngSwitchCase="'Proyectos'"></app-proyectos>
+                <app-experiencias *ngSwitchCase="'Experiencia'"></app-experiencias>
                 <app-tecnologias *ngSwitchCase="'Tecnologías'"></app-tecnologias>
                 <app-educaciones *ngSwitchCase="'Educacion'"></app-educaciones>
             </div>

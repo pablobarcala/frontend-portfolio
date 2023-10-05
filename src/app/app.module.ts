@@ -15,6 +15,10 @@ import { PersonaComponent } from './components/persona/persona.component';
 import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
 import { TecnologiaItemComponent } from './components/tecnologia-item/tecnologia-item.component';
 import { PersonaInicioComponent } from './components/persona-inicio/persona-inicio.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ProyectoItemComponent } from './components/proyecto-item/proyecto-item.component';
+import { ExperienciasComponent } from './components/experiencias/experiencias.component';
+import { ExperienciaItemComponent } from './components/experiencia-item/experiencia-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { PersonaInicioComponent } from './components/persona-inicio/persona-inic
     PersonaComponent,
     TecnologiasComponent,
     TecnologiaItemComponent,
-    PersonaInicioComponent
+    PersonaInicioComponent,
+    ProyectosComponent,
+    ProyectoItemComponent,
+    ExperienciasComponent,
+    ExperienciaItemComponent
   ],
   imports: [
     BrowserModule,
