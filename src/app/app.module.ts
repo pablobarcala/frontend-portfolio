@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RoutingModule } from './modules/routing/routing.module';
 import { AdminModule } from './modules/admin/admin.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './modules/material/material.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -19,7 +21,6 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ProyectoItemComponent } from './components/proyecto-item/proyecto-item.component';
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { ExperienciaItemComponent } from './components/experiencia-item/experiencia-item.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     RoutingModule,
     AdminModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
