@@ -1,4 +1,4 @@
-div {
+.item {
     padding: 20px 0;
 }
 
@@ -18,7 +18,17 @@ h4 {
     border: solid 0.5px var(--text-color);
 }
 
-span > p {
+p {
+    margin-bottom: 10px;
+}
+
+div > span {
     font-weight: 200;
+    font-size: 0.9rem;
     margin: 5px 0;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--text-color);
 }

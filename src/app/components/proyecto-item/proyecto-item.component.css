@@ -1,0 +1,28 @@
+div {
+    padding: 20px 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.separate {
+    padding: 0;
+    width: 30%;
+    margin-bottom: 15px;
+    border: solid 0.5px var(--text-color);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 0.9rem;
+    font-weight: 200;
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px var(--text-color);
+}
