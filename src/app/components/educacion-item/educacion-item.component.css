@@ -22,7 +22,7 @@ p {
     margin-bottom: 10px;
 }
 
-div > span {
+.fecha > span {
     font-weight: 200;
     font-size: 0.9rem;
     margin: 5px 0;
@@ -31,4 +31,9 @@ div > span {
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--text-color);
+}
+
+span > p {
+    font-weight: 200;
+    font-size: 0.8rem;
 }
