@@ -1,0 +1,15 @@
+.item {
+    padding: 20px 0;
+}
+
+a {
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+svg {
+    margin-right: 10px;
+}
