@@ -19,6 +19,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ProyectoItemComponent } from './components/proyecto-item/proyecto-item.component';
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { ExperienciaItemComponent } from './components/experiencia-item/experiencia-item.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ExperienciaItemComponent } from './components/experiencia-item/experien
     BrowserModule,
     HttpClientModule,
     RoutingModule,
-    AdminModule
+    AdminModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

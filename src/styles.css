@@ -1,3 +1,6 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
 :root {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
