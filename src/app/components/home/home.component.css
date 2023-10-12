@@ -98,10 +98,9 @@ app-header {
         width: 100%;
     }
 
-    /* .seccion-nav {
-        height: 70px;
-        padding-bottom: 20px;
-    } */
+    .seccion-nav {
+        height: 30vh;
+    }
 }
 
 @keyframes gradient {
