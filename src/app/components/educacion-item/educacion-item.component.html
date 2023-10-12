@@ -14,6 +14,8 @@
         </p>
     </span>
     <div class="fecha">
-        <span *ngIf="educacion.fecha_inicio">{{educacion.fecha_inicio | date: 'dd/MM/yyy'}} <span *ngIf="educacion.fecha_fin">- {{educacion.fecha_fin | date: 'dd/MM/yyy'}}</span></span>
+        <span 
+            *ngIf="educacion.fecha_inicio"
+        >{{educacion.fecha_inicio | date: 'dd/MM/yyy'}} <span *ngIf="educacion.fecha_fin">- {{educacion.fecha_fin | date: 'dd/MM/yyy'}}</span><span *ngIf="!educacion.fecha_fin">- actualidad</span></span>
     </div>
 </div>

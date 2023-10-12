@@ -1,2 +1,14 @@
-<h4>{{experiencia.puesto}}</h4>
-<h4>{{experiencia.nombre_empresa}}</h4>
+<div class="item">
+    <h4>{{experiencia.puesto}}</h4>
+    <p class="empresa">Empresa: {{experiencia.nombre_empresa}}</p>
+    <div class="separate"></div>
+    <p>{{experiencia.descripcion}}</p>
+    <span [ngSwitch]="experiencia.trabajo_actual">
+        <p *ngSwitchCase="true">Trabajo actual</p>
+    </span>
+    <div class="fecha">
+        <span 
+            *ngIf="experiencia.fecha_inicio"
+        >{{experiencia.fecha_inicio | date: 'dd/MM/yyy'}} <span *ngIf="experiencia.fecha_fin">- {{experiencia.fecha_fin | date: 'dd/MM/yyy'}}</span><span *ngIf="!experiencia.fecha_fin">- actualidad</span></span>
+    </div>
+</div>
