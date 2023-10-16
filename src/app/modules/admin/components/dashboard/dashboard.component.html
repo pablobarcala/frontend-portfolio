@@ -2,12 +2,15 @@
     <div class="header">
         <h2>Pablo Barcala</h2>
         <ul class="nav">
-            <li>Info</li>
+            <li routerLink="info" routerLinkActive="selected">Info</li>
             <li>Proyectos</li>
             <li>Experiencia</li>
             <li>Tecnologías</li>
             <li>Educación</li>
         </ul>
         <button routerLink="/">Volver a la página</button>
+    </div>
+    <div class="container">
+        <router-outlet></router-outlet>
     </div>
 </div>
