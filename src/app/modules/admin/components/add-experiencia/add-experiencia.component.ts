@@ -21,8 +21,8 @@ export class AddExperienciaComponent {
       puesto: ['', Validators.required],
       descripcion: [''],
       trabajo_actual: [false],
-      fecha_inicio: [''],
-      fecha_fin: ['']
+      fecha_inicio: [Date],
+      fecha_fin: [Date]
     })
   }
 

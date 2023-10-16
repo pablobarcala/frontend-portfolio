@@ -29,8 +29,8 @@ export class EditExperienciaComponent {
       puesto: ['', Validators.required],
       descripcion: [''],
       trabajo_actual: [false],
-      fecha_inicio: [''],
-      fecha_fin: ['']
+      fecha_inicio: [Date],
+      fecha_fin: [Date]
     })
   }
 
@@ -64,7 +64,7 @@ export class EditExperienciaComponent {
         this.experienciaService.editExperiencia(this.experiencia.id, this.form.value).subscribe((resp: any) => {
           if(resp){
             alert("Se editó correctamente")
-            this.router.navigate(['/admin/panel/proyectos'])
+            this.router.navigate(['/admin/panel/experiencia'])
             .then(() => window.location.reload())
           } else {
             alert("Hubo algún error")

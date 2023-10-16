@@ -18,7 +18,7 @@
         </div>
         <div class="input">
             <label for="fecha_inicio">Fecha de inicio</label>
-            <input type="text" id="fecha_inicio" placeholder="Fecha de inicio" formControlName="fecha_inicio">
+            <input type="date" id="fecha_inicio" placeholder="Fecha de inicio" formControlName="fecha_inicio">
             <p
                 class="error"
                 *ngIf="form.get('fecha_inicio')?.hasError('required') && form.get('fecha_inicio')?.touched"
@@ -26,7 +26,7 @@
         </div>
         <div class="input">
             <label for="fecha_fin">Fecha de fin</label>
-            <input type="text" id="fecha_fin" placeholder="Fecha de fin" formControlName="fecha_fin">
+            <input type="date" id="fecha_fin" placeholder="Fecha de fin" formControlName="fecha_fin">
         </div>
         <div class="input">
             <label for="descripcion">Descripción</label>
@@ -39,6 +39,6 @@
     </div>
     <div class="botones">
         <button type="submit">Guardar</button>
-        <button type="button" routerLink="/admin/panel/proyectos">Cerrar</button>
+        <button type="button" routerLink="/admin/panel/experiencia">Cerrar</button>
     </div>
 </form>

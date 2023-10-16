@@ -34,7 +34,7 @@
             </div>
             <div class="item">
                 <h4>Fechas</h4>
-                <p>{{experiencia.fecha_inicio}}<span *ngIf="experiencia.fecha_fin"> - {{experiencia.fecha_fin}}</span></p>
+                <p>{{experiencia.fecha_inicio | date: 'dd/MM/yyyy'}}<span *ngIf="experiencia.fecha_fin"> - {{experiencia.fecha_fin | date: 'dd/MM/yyyy'}}</span></p>
             </div>
         </div>
     </div>
