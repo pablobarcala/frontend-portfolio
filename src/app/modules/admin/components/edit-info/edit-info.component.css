@@ -46,3 +46,9 @@ button {
     padding: 10px;
     border-radius: 10px;
 }
+
+.error {
+    color: red;
+    padding-bottom: 10px;
+    font-size: 0.8rem;
+}

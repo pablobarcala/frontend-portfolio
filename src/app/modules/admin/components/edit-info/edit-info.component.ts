@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Persona } from 'src/app/interfaces/Persona';
 import { PersonaService } from 'src/app/services/persona.service';
 
@@ -17,7 +17,8 @@ export class EditInfoComponent {
   constructor(
     private route: ActivatedRoute,
     private personaService: PersonaService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ){
     route.params.subscribe(params => {
       this.id = params['id'];
@@ -48,6 +49,24 @@ export class EditInfoComponent {
         titulo: this.persona.titulo,
         descripcion: this.persona.descripcion
       })
+    }
+  }
+
+  editarPersona(event: Event){
+    event.preventDefault()
+
+    if(this.form.valid){
+      this.personaService.editPersona(this.id, this.form.value).subscribe((resp: any) => {
+        if(resp){
+          alert("La persona se editó correctamente")
+          this.router.navigate(['/admin/panel/info'])
+          .then(() => window.location.reload())
+        } else {
+          alert("Hubo un error")
+        }
+      })
+    } else {
+      this.form.markAllAsTouched()
     }
   }
 }

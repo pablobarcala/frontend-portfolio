@@ -1,20 +1,36 @@
-<form action="" [formGroup]="form">
+<form action="" [formGroup]="form" (submit)="editarPersona($event)">
     <div class="form">
         <div class="input">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" placeholder="Nombre" formControlName="nombre">
+            <p
+                class="error"
+                *ngIf="form.get('nombre')?.hasError('required') && form.get('nombre')?.touched"
+            >Se necesita un nombre</p>
         </div>
         <div class="input">
             <label for="apellido">Apellido</label>
             <input type="text" id="apellido" placeholder="Apellido" formControlName="apellido">
+            <p
+                class="error"
+                *ngIf="form.get('apellido')?.hasError('required') && form.get('apellido')?.touched"
+            >Se necesita un apellido</p>
         </div>
         <div class="input">
             <label for="titulo">Título</label>
             <input type="text" id="titulo" placeholder="Titulo" formControlName="titulo">
+            <p
+                class="error"
+                *ngIf="form.get('titulo')?.hasError('required') && form.get('titulo')?.touched"
+            >Se necesita un título</p>
         </div>
         <div class="input">
             <label for="descripcion">Descripción</label>
             <textarea id="descripcion" placeholder="Descripción" formControlName="descripcion"></textarea>
+            <p
+                class="error"
+                *ngIf="form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched"
+            >Se necesita una descripción</p>
         </div>
     </div>
     <div class="botones">
