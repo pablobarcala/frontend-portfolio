@@ -7,6 +7,9 @@ import { AdminComponent } from './components/admin/admin.component';
 import { InfoComponent } from './components/info/info.component';
 import { EditInfoComponent } from './components/edit-info/edit-info.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { EditProyectoComponent } from './components/edit-proyecto/edit-proyecto.component';
+import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     AdminComponent,
     InfoComponent,
-    EditInfoComponent
+    EditInfoComponent,
+    ProyectosComponent,
+    EditProyectoComponent,
+    AddProyectoComponent
   ],
   imports: [
     CommonModule,

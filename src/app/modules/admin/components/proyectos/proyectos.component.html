@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="title">
+        <h2>Proyectos</h2>
+        <button routerLink="add-proyecto">
+            <img src="../../../../../assets/icons/add.svg" alt="Agregar">
+        </button>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="table" *ngIf="proyectos">
+        <div class="elemento" *ngFor="let proyecto of proyectos">
+            <div class="head_item">
+                <h4>{{proyecto.nombreProyecto}}</h4>
+                <div class="botones">
+                    <button [routerLink]="['edit-proyecto', proyecto.id]">
+                        <img src="../../../../../assets/icons/edit.svg" alt="Editar">
+                    </button>
+                    <button>
+                        <img src="../../../../../assets/icons/delete.svg" alt="Eliminar">
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <h4>Apellido</h4>
+                <p>{{proyecto.descripcion}}</p>
+            </div>
+            <div class="item">
+                <h4>Título</h4>
+                <p>{{proyecto.link}}</p>
+            </div>
+            <div class="item">
+                <h4>Descripción</h4>
+                <p>{{proyecto.fecha}}</p>
+            </div>
+        </div>
+    </div>
+</div>

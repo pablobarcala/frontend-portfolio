@@ -1,0 +1,40 @@
+<form action="" [formGroup]="form" (submit)="addProyecto($event)">
+    <div class="form">
+        <div class="input">
+            <label for="nombreProyecto">Nombre del proyecto</label>
+            <input type="text" id="nombreProyecto" placeholder="Nombre" formControlName="nombreProyecto">
+            <p
+                class="error"
+                *ngIf="form.get('nombreProyecto')?.hasError('required') && form.get('nombreProyecto')?.touched"
+            >Se necesita un nombre de proyecto</p>
+        </div>
+        <div class="input">
+            <label for="link">Link</label>
+            <input type="text" id="link" placeholder="Link" formControlName="link">
+            <p
+                class="error"
+                *ngIf="form.get('link')?.hasError('required') && form.get('link')?.touched"
+            >Se necesita un link</p>
+        </div>
+        <div class="input">
+            <label for="fecha">Fecha</label>
+            <input type="text" id="fecha" placeholder="Fecha" formControlName="fecha">
+            <p
+                class="error"
+                *ngIf="form.get('fecha')?.hasError('required') && form.get('fecha')?.touched"
+            >Se necesita una fecha</p>
+        </div>
+        <div class="input">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" placeholder="Descripción" formControlName="descripcion"></textarea>
+            <p
+                class="error"
+                *ngIf="form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched"
+            >Se necesita una descripción</p>
+        </div>
+    </div>
+    <div class="botones">
+        <button type="submit">Guardar</button>
+        <button type="button" routerLink="/admin/panel/proyectos">Cerrar</button>
+    </div>
+</form>
