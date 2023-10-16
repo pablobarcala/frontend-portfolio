@@ -16,6 +16,9 @@ import { AddExperienciaComponent } from './components/add-experiencia/add-experi
 import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
 import { AddTecnologiasComponent } from './components/add-tecnologias/add-tecnologias.component';
 import { EditTecnologiasComponent } from './components/edit-tecnologias/edit-tecnologias.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
+import { EditEducacionComponent } from './components/edit-educacion/edit-educacion.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { EditTecnologiasComponent } from './components/edit-tecnologias/edit-tec
     AddExperienciaComponent,
     TecnologiasComponent,
     AddTecnologiasComponent,
-    EditTecnologiasComponent
+    EditTecnologiasComponent,
+    EducacionComponent,
+    AddEducacionComponent,
+    EditEducacionComponent
   ],
   imports: [
     CommonModule,

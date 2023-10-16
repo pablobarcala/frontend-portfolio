@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="title">
+        <h2>Experiencia</h2>
+        <button routerLink="add-educacion">
+            <img src="../../../../../assets/icons/add.svg" alt="Agregar">
+        </button>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="table" *ngIf="educaciones">
+        <div class="elemento" *ngFor="let educacion of educaciones">
+            <div class="head_item">
+                <h4>{{educacion.nombreInstituto}}</h4>
+                <div class="botones">
+                    <button [routerLink]="['edit-educacion', educacion.id]">
+                        <img src="../../../../../assets/icons/edit.svg" alt="Editar">
+                    </button>
+                    <button>
+                        <img src="../../../../../assets/icons/delete.svg" alt="Eliminar">
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <h4>Título</h4>
+                <p>{{educacion.titulo}}</p>
+            </div>
+            <div class="item">
+                <h4>Descripción</h4>
+                <p>{{educacion.descripcion}}</p>
+            </div>
+            <div class="item">
+                <h4>En progreso?</h4>
+                <p *ngIf="educacion.en_progreso">Sí</p>
+                <p *ngIf="!educacion.en_progreso">No</p>
+            </div>
+            <div class="item">
+                <h4>Fechas</h4>
+                <p>{{educacion.fecha_inicio | date: 'dd/MM/yyyy'}}<span *ngIf="educacion.fecha_fin"> - {{educacion.fecha_fin | date: 'dd/MM/yyyy'}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

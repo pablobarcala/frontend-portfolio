@@ -15,6 +15,9 @@ import { AddExperienciaComponent } from '../admin/components/add-experiencia/add
 import { TecnologiasComponent } from '../admin/components/tecnologias/tecnologias.component';
 import { EditTecnologiasComponent } from '../admin/components/edit-tecnologias/edit-tecnologias.component';
 import { AddTecnologiasComponent } from '../admin/components/add-tecnologias/add-tecnologias.component';
+import { EducacionComponent } from '../admin/components/educacion/educacion.component';
+import { EditEducacionComponent } from '../admin/components/edit-educacion/edit-educacion.component';
+import { AddEducacionComponent } from '../admin/components/add-educacion/add-educacion.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -35,6 +38,10 @@ const routes: Routes = [
       {path: 'tecnologias', component: TecnologiasComponent, children: [
         {path: 'edit-tecnologia/:id', component: EditTecnologiasComponent},
         {path: 'add-tecnologia', component: AddTecnologiasComponent}
+      ]},
+      {path: 'educacion', component: EducacionComponent, children: [
+        {path: 'edit-educacion/:id', component: EditEducacionComponent},
+        {path: 'add-educacion', component: AddEducacionComponent}
       ]}
     ]}
   ]}

@@ -1,0 +1,44 @@
+<form action="" [formGroup]="form" (submit)="addEducacion($event)">
+    <div class="form">
+        <div class="input">
+            <label for="nombreInstituto">Nombre del instituto</label>
+            <input type="text" id="nombreInstituto" placeholder="Nombre de instituto" formControlName="nombreInstituto">
+            <p
+                class="error"
+                *ngIf="form.get('nombreInstituto')?.hasError('required') && form.get('nombreInstituto')?.touched"
+            >Se necesita un nombre del instituto</p>
+        </div>
+        <div class="input">
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" placeholder="Titulo" formControlName="titulo">
+            <p
+                class="error"
+                *ngIf="form.get('titulo')?.hasError('required') && form.get('titulo')?.touched"
+            >Se necesita un titulo</p>
+        </div>
+        <div class="input">
+            <label for="fecha_inicio">Fecha de inicio</label>
+            <input type="date" id="fecha_inicio" placeholder="Fecha de inicio" formControlName="fecha_inicio">
+            <p
+                class="error"
+                *ngIf="form.get('fecha_inicio')?.hasError('required') && form.get('fecha_inicio')?.touched"
+            >Se necesita una fecha de inicio</p>
+        </div>
+        <div class="input">
+            <label for="fecha_fin">Fecha de fin</label>
+            <input type="date" id="fecha_fin" placeholder="Fecha de fin" formControlName="fecha_fin">
+        </div>
+        <div class="input">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" placeholder="Descripción" formControlName="descripcion"></textarea>
+            <p
+                class="error"
+                *ngIf="form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched"
+            >Se necesita una descripción</p>
+        </div>
+    </div>
+    <div class="botones">
+        <button type="submit">Guardar</button>
+        <button type="button" routerLink="/admin/panel/educacion">Cerrar</button>
+    </div>
+</form>

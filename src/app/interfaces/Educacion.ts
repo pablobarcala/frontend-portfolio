@@ -1,5 +1,5 @@
 export interface Educacion {
-    id?: string;
+    id: number;
     titulo?: string;
     nombreInstituto?: string;
     fecha_inicio?: string;
