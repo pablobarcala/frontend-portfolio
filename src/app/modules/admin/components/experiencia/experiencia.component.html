@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="title">
+        <h2>Experiencia</h2>
+        <button routerLink="add-experiencia">
+            <img src="../../../../../assets/icons/add.svg" alt="Agregar">
+        </button>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="table" *ngIf="experiencias">
+        <div class="elemento" *ngFor="let experiencia of experiencias">
+            <div class="head_item">
+                <h4>{{experiencia.nombre_empresa}}</h4>
+                <div class="botones">
+                    <button [routerLink]="['edit-experiencia', experiencia.id]">
+                        <img src="../../../../../assets/icons/edit.svg" alt="Editar">
+                    </button>
+                    <button>
+                        <img src="../../../../../assets/icons/delete.svg" alt="Eliminar">
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <h4>Puesto</h4>
+                <p>{{experiencia.puesto}}</p>
+            </div>
+            <div class="item">
+                <h4>Descripción</h4>
+                <p>{{experiencia.descripcion}}</p>
+            </div>
+            <div class="item">
+                <h4>Trabajo actual</h4>
+                <p *ngIf="experiencia.trabajo_actual">Sí</p>
+                <p *ngIf="!experiencia.trabajo_actual">No</p>
+            </div>
+            <div class="item">
+                <h4>Fechas</h4>
+                <p>{{experiencia.fecha_inicio}}<span *ngIf="experiencia.fecha_fin"> - {{experiencia.fecha_fin}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

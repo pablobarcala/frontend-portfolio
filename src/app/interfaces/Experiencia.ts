@@ -1,5 +1,5 @@
 export interface Experiencia {
-    id?: number;
+    id: number;
     puesto?: string;
     nombre_empresa?: string;
     fecha_inicio?: Date;

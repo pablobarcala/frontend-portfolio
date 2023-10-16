@@ -10,6 +10,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { EditProyectoComponent } from './components/edit-proyecto/edit-proyecto.component';
 import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EditExperienciaComponent } from './components/edit-experiencia/edit-experiencia.component';
+import { AddExperienciaComponent } from './components/add-experiencia/add-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.com
     EditInfoComponent,
     ProyectosComponent,
     EditProyectoComponent,
-    AddProyectoComponent
+    AddProyectoComponent,
+    ExperienciaComponent,
+    EditExperienciaComponent,
+    AddExperienciaComponent
   ],
   imports: [
     CommonModule,

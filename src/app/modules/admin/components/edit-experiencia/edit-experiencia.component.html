@@ -1,0 +1,44 @@
+<form action="" [formGroup]="form" (submit)="editExperiencia($event)">
+    <div class="form">
+        <div class="input">
+            <label for="nombre_empresa">Nombre de la empresa</label>
+            <input type="text" id="nombre_empresa" placeholder="Nombre" formControlName="nombre_empresa">
+            <p
+                class="error"
+                *ngIf="form.get('nombre_empresa')?.hasError('required') && form.get('nombre_empresa')?.touched"
+            >Se necesita un nombre de empresa</p>
+        </div>
+        <div class="input">
+            <label for="puesto">Puesto</label>
+            <input type="text" id="puesto" placeholder="Puesto" formControlName="puesto">
+            <p
+                class="error"
+                *ngIf="form.get('puesto')?.hasError('required') && form.get('puesto')?.touched"
+            >Se necesita un puesto</p>
+        </div>
+        <div class="input">
+            <label for="fecha_inicio">Fecha de inicio</label>
+            <input type="text" id="fecha_inicio" placeholder="Fecha de inicio" formControlName="fecha_inicio">
+            <p
+                class="error"
+                *ngIf="form.get('fecha_inicio')?.hasError('required') && form.get('fecha_inicio')?.touched"
+            >Se necesita una fecha de inicio</p>
+        </div>
+        <div class="input">
+            <label for="fecha_fin">Fecha de fin</label>
+            <input type="text" id="fecha_fin" placeholder="Fecha de fin" formControlName="fecha_fin">
+        </div>
+        <div class="input">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" placeholder="Descripción" formControlName="descripcion"></textarea>
+            <p
+                class="error"
+                *ngIf="form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched"
+            >Se necesita una descripción</p>
+        </div>
+    </div>
+    <div class="botones">
+        <button type="submit">Guardar</button>
+        <button type="button" routerLink="/admin/panel/experiencia">Cerrar</button>
+    </div>
+</form>

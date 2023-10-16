@@ -9,6 +9,9 @@ import { EditInfoComponent } from '../admin/components/edit-info/edit-info.compo
 import { ProyectosComponent } from '../admin/components/proyectos/proyectos.component';
 import { EditProyectoComponent } from '../admin/components/edit-proyecto/edit-proyecto.component';
 import { AddProyectoComponent } from '../admin/components/add-proyecto/add-proyecto.component';
+import { ExperienciaComponent } from '../admin/components/experiencia/experiencia.component';
+import { EditExperienciaComponent } from '../admin/components/edit-experiencia/edit-experiencia.component';
+import { AddExperienciaComponent } from '../admin/components/add-experiencia/add-experiencia.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,6 +24,10 @@ const routes: Routes = [
       {path: 'proyectos', component: ProyectosComponent, children: [
         {path: 'edit-proyecto/:id', component: EditProyectoComponent},
         {path: 'add-proyecto', component: AddProyectoComponent}
+      ]},
+      {path: 'experiencia', component: ExperienciaComponent, children: [
+        {path: 'edit-experiencia/:id', component: EditExperienciaComponent},
+        {path: 'add-experiencia', component: AddExperienciaComponent}
       ]}
     ]}
   ]}
