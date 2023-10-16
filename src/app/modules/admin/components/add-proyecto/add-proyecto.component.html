@@ -18,7 +18,7 @@
         </div>
         <div class="input">
             <label for="fecha">Fecha</label>
-            <input type="text" id="fecha" placeholder="Fecha" formControlName="fecha">
+            <input type="date" id="fecha" placeholder="Fecha" formControlName="fecha">
             <p
                 class="error"
                 *ngIf="form.get('fecha')?.hasError('required') && form.get('fecha')?.touched"

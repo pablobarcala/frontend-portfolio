@@ -3,5 +3,5 @@
     <p>{{proyecto.link}}</p>
     <div class="separate"></div>
     <p>{{proyecto.descripcion}}</p>
-    <span>{{proyecto.fecha | date:'dd/MM/yyy'}}</span>
+    <span *ngIf="proyecto.fecha">{{proyecto.fecha | date:'dd/MM/yyy'}}</span>
 </div>

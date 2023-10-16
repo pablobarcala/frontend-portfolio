@@ -28,7 +28,7 @@ export class EditProyectoComponent {
       nombreProyecto: ['', Validators.required],
       descripcion: [''],
       link: [''],
-      fecha: ['']
+      fecha: [Date]
     })
   }
 

@@ -20,7 +20,7 @@ export class AddProyectoComponent {
       nombreProyecto: ['', Validators.required],
       descripcion: [''],
       link: [''],
-      fecha: ['']
+      fecha: [Date]
     })
   }
 
