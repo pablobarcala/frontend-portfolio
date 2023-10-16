@@ -12,6 +12,9 @@ import { AddProyectoComponent } from '../admin/components/add-proyecto/add-proye
 import { ExperienciaComponent } from '../admin/components/experiencia/experiencia.component';
 import { EditExperienciaComponent } from '../admin/components/edit-experiencia/edit-experiencia.component';
 import { AddExperienciaComponent } from '../admin/components/add-experiencia/add-experiencia.component';
+import { TecnologiasComponent } from '../admin/components/tecnologias/tecnologias.component';
+import { EditTecnologiasComponent } from '../admin/components/edit-tecnologias/edit-tecnologias.component';
+import { AddTecnologiasComponent } from '../admin/components/add-tecnologias/add-tecnologias.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -28,6 +31,10 @@ const routes: Routes = [
       {path: 'experiencia', component: ExperienciaComponent, children: [
         {path: 'edit-experiencia/:id', component: EditExperienciaComponent},
         {path: 'add-experiencia', component: AddExperienciaComponent}
+      ]},
+      {path: 'tecnologias', component: TecnologiasComponent, children: [
+        {path: 'edit-tecnologia/:id', component: EditTecnologiasComponent},
+        {path: 'add-tecnologia', component: AddTecnologiasComponent}
       ]}
     ]}
   ]}

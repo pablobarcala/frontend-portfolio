@@ -13,6 +13,9 @@ import { AddProyectoComponent } from './components/add-proyecto/add-proyecto.com
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EditExperienciaComponent } from './components/edit-experiencia/edit-experiencia.component';
 import { AddExperienciaComponent } from './components/add-experiencia/add-experiencia.component';
+import { TecnologiasComponent } from './components/tecnologias/tecnologias.component';
+import { AddTecnologiasComponent } from './components/add-tecnologias/add-tecnologias.component';
+import { EditTecnologiasComponent } from './components/edit-tecnologias/edit-tecnologias.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { AddExperienciaComponent } from './components/add-experiencia/add-experi
     AddProyectoComponent,
     ExperienciaComponent,
     EditExperienciaComponent,
-    AddExperienciaComponent
+    AddExperienciaComponent,
+    TecnologiasComponent,
+    AddTecnologiasComponent,
+    EditTecnologiasComponent
   ],
   imports: [
     CommonModule,

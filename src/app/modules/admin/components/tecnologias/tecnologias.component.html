@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="title">
+        <h2>Tecnologías</h2>
+        <button routerLink="add-tecnologia">
+            <img src="../../../../../assets/icons/add.svg" alt="Agregar">
+        </button>
+    </div>
+    <router-outlet></router-outlet>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Porcentaje</th>
+            <th>Botones</th>
+        </tr>  
+        <tr
+            *ngFor="let tecnologia of tecnologias"
+        >
+            <td>{{tecnologia.nombreTecnologia}}</td>
+            <td>{{tecnologia.porcentaje}}%</td>
+            <td class="botones">
+                <button [routerLink]="['edit-tecnologia', tecnologia.id]">
+                    <img src="../../../../../assets/icons/edit.svg" alt="Editar">
+                </button>
+                <button>
+                    <img src="../../../../../assets/icons/delete.svg" alt="Eliminar">
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,5 +1,5 @@
 export interface Tecnologia {
-    id?: number,
+    id: number,
     nombreTecnologia?: string,
     porcentaje?: number
 }

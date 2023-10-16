@@ -1,0 +1,24 @@
+<div class="container">
+    <form action="" [formGroup]="form" (submit)="addTecnologia($event)">
+        <div class="input">
+            <label for="nombreTecnologia">Nombre de tecnología</label>
+            <input type="text" id="nombreTecnologia" placeholder="Nombre de tecnología" formControlName="nombreTecnologia">
+            <p 
+                class="error"
+                *ngIf="form.get('nombreTecnologia')?.hasError('required') && form.get('nombreTecnologia')?.touched"
+            >Se necesita un nombre de tecnología</p>
+        </div>
+        <div class="input">
+            <label for="porcentaje">Porcentaje</label>
+            <input type="number" id="porcentaje" placeholder="Porcentaje" formControlName="porcentaje">
+            <p 
+                class="error"
+                *ngIf="form.get('porcentaje')?.hasError('required') && form.get('porcentaje')?.touched"
+            >Se necesita un porcentaje</p>
+        </div>
+        <div class="botones">
+            <button type="submit">Guardar</button>
+            <button type="button" routerLink="/admin/panel/tecnologias">Cerrar</button>
+        </div>
+    </form>
+</div>
