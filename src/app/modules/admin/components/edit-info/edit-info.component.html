@@ -25,6 +25,38 @@
             >Se necesita un título</p>
         </div>
         <div class="input">
+            <label for="linkedin">LinkedIn</label>
+            <input type="text" id="linkedin" placeholder="LinkedIn" formControlName="linkedin">
+            <p
+                class="error"
+                *ngIf="form.get('linkedin')?.hasError('required') && form.get('linkedin')?.touched"
+            >Se necesita un LinkedIn</p>
+        </div>
+        <div class="input">
+            <label for="github">Github</label>
+            <input type="text" id="github" placeholder="Github" formControlName="github">
+            <p
+                class="error"
+                *ngIf="form.get('github')?.hasError('required') && form.get('github')?.touched"
+            >Se necesita un Github</p>
+        </div>
+        <div class="input">
+            <label for="mail">Mail</label>
+            <input type="text" id="mail" placeholder="Mail" formControlName="mail">
+            <p
+                class="error"
+                *ngIf="form.get('mail')?.hasError('required') && form.get('mail')?.touched"
+            >Se necesita un mail</p>
+        </div>
+        <div class="input">
+            <label for="linkContacto">Link de contacto</label>
+            <input type="text" id="linkContacto" placeholder="Link de contacto" formControlName="linkContacto">
+            <p
+                class="error"
+                *ngIf="form.get('linkContacto')?.hasError('required') && form.get('linkContacto')?.touched"
+            >Se necesita un link de contacto</p>
+        </div>
+        <div class="input">
             <label for="descripcion">Descripción</label>
             <textarea id="descripcion" placeholder="Descripción" formControlName="descripcion"></textarea>
             <p

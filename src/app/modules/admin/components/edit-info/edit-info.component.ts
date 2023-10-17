@@ -28,7 +28,11 @@ export class EditInfoComponent {
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
       titulo: ['', Validators.required],
-      descripcion: ['', Validators.required]
+      descripcion: ['', Validators.required],
+      linkedin: ['', Validators.required],
+      github: ['', Validators.required],
+      mail: [''],
+      linkContacto: ['', Validators.required]
     })
   }
 
@@ -47,7 +51,11 @@ export class EditInfoComponent {
         nombre: this.persona.nombre,
         apellido: this.persona.apellido,
         titulo: this.persona.titulo,
-        descripcion: this.persona.descripcion
+        descripcion: this.persona.descripcion,
+        linkedin: this.persona.linkedin,
+        github: this.persona.github,
+        mail: this.persona.mail,
+        linkContacto: this.persona.linkContacto
       })
     }
   }
