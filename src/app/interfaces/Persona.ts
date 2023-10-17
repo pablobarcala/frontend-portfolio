@@ -3,5 +3,9 @@ export interface Persona {
     nombre?: string,
     apellido?: string,
     descripcion?: string,
-    titulo?: string
+    titulo?: string,
+    linkedin?: string,
+    github?: string,
+    mail?: string,
+    linkContacto?: string
 }
