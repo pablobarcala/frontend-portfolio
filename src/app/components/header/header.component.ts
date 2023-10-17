@@ -27,7 +27,7 @@ export class HeaderComponent {
       let personas: Persona[] = resp
 
       personas.find((p: any) => {
-        if(p.idpersona == 1){
+        if(p.id == 1){
           this.persona = p
         }
       })
