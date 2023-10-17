@@ -27,8 +27,9 @@ export class EditExperienciaComponent {
     this.form = formBuilder.group({
       nombre_empresa: ['', Validators.required],
       puesto: ['', Validators.required],
+      link: [''],
       descripcion: [''],
-      trabajo_actual: [false],
+      trabajo_actual: [false, Validators.required],
       fecha_inicio: [Date],
       fecha_fin: [Date]
     })
@@ -48,6 +49,7 @@ export class EditExperienciaComponent {
       this.form.patchValue({
         nombre_empresa: this.experiencia.nombre_empresa,
         puesto: this.experiencia.puesto,
+        link: this.experiencia.link,
         descripcion: this.experiencia.descripcion,
         trabajo_actual: this.experiencia.trabajo_actual,
         fecha_inicio: this.experiencia.fecha_inicio,

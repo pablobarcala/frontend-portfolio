@@ -17,6 +17,14 @@
             >Se necesita un puesto</p>
         </div>
         <div class="input">
+            <label for="link">Link</label>
+            <input type="text" id="link" placeholder="Link" formControlName="link">
+            <p
+                class="error"
+                *ngIf="form.get('link')?.hasError('required') && form.get('link')?.touched"
+            >Se necesita un link</p>
+        </div>
+        <div class="input">
             <label for="fecha_inicio">Fecha de inicio</label>
             <input type="date" id="fecha_inicio" placeholder="Fecha de inicio" formControlName="fecha_inicio">
             <p

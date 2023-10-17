@@ -19,8 +19,9 @@ export class AddExperienciaComponent {
     this.form = formBuilder.group({
       nombre_empresa: ['', Validators.required],
       puesto: ['', Validators.required],
+      link: [''],
       descripcion: [''],
-      trabajo_actual: [false],
+      trabajo_actual: [false, Validators.required],
       fecha_inicio: [Date],
       fecha_fin: [Date]
     })
