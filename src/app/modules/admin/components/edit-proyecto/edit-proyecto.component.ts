@@ -28,6 +28,7 @@ export class EditProyectoComponent {
       nombreProyecto: ['', Validators.required],
       descripcion: [''],
       link: [''],
+      github: [''],
       fecha: [Date]
     })
   }
@@ -47,6 +48,7 @@ export class EditProyectoComponent {
         nombreProyecto: this.proyecto.nombreProyecto,
         descripcion: this.proyecto.descripcion,
         link: this.proyecto.link,
+        github: this.proyecto.github,
         fecha: this.proyecto.fecha
       })
     }

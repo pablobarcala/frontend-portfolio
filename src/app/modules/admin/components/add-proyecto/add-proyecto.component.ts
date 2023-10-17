@@ -20,6 +20,7 @@ export class AddProyectoComponent {
       nombreProyecto: ['', Validators.required],
       descripcion: [''],
       link: [''],
+      github: [''],
       fecha: [Date]
     })
   }

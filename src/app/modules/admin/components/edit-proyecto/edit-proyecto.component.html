@@ -17,6 +17,14 @@
             >Se necesita un link</p>
         </div>
         <div class="input">
+            <label for="github">Github</label>
+            <input type="text" id="github" placeholder="Github" formControlName="github">
+            <p
+                class="error"
+                *ngIf="form.get('github')?.hasError('required') && form.get('github')?.touched"
+            >Se necesita un Github</p>
+        </div>
+        <div class="input">
             <label for="fecha">Fecha</label>
             <input type="date" id="fecha" placeholder="Fecha" formControlName="fecha">
             <p
