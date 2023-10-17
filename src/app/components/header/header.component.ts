@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Persona } from 'src/app/interfaces/Persona';
 import { NavService } from 'src/app/services/nav.service';
+import { PersonaService } from 'src/app/services/persona.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -11,14 +13,25 @@ export class HeaderComponent {
   navOpcion: string = ""
   enTransicion: boolean = true
   theme: string = 'dark'
+  persona: Persona | undefined = undefined
   
   constructor(
     private themeService: ThemeService,
-    private navService: NavService
+    private navService: NavService,
+    private personaService: PersonaService
   ){
     navService.getNavOpcion().subscribe(resp => this.navOpcion = resp)
     navService.getTransicion().subscribe(resp => this.enTransicion = resp)
     themeService.getTheme().subscribe(resp => this.theme = resp)
+    personaService.getPersonas().subscribe((resp: any) => {
+      let personas: Persona[] = resp
+
+      personas.find((p: any) => {
+        if(p.idpersona == 1){
+          this.persona = p
+        }
+      })
+    })
   }
 
   onMouseOver() {
