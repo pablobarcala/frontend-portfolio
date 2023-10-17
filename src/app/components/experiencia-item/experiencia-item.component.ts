@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Experiencia } from 'src/app/interfaces/Experiencia';
-import { Experiencias } from 'src/app/interfaces/mock-experiencia';
 
 @Component({
   selector: 'app-experiencia-item',
@@ -8,5 +7,5 @@ import { Experiencias } from 'src/app/interfaces/mock-experiencia';
   styleUrls: ['./experiencia-item.component.css']
 })
 export class ExperienciaItemComponent {
-  @Input() experiencia: Experiencia = Experiencias[0]
+  @Input() experiencia: Experiencia | undefined = undefined;
 }

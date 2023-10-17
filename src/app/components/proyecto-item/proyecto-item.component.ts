@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Proyecto } from 'src/app/interfaces/Proyecto';
-import { Proyectos } from 'src/app/interfaces/mock-proyecto';
 
 @Component({
   selector: 'app-proyecto-item',
@@ -8,5 +7,5 @@ import { Proyectos } from 'src/app/interfaces/mock-proyecto';
   styleUrls: ['./proyecto-item.component.css']
 })
 export class ProyectoItemComponent {
-  @Input() proyecto: Proyecto = Proyectos[0]
+  @Input() proyecto: Proyecto | undefined = undefined;
 }

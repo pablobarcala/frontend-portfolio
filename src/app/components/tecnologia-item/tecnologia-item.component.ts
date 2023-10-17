@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Tecnologia } from 'src/app/interfaces/Tecnologia';
-import { Tecnologias } from 'src/app/interfaces/mock-tecnologia';
 
 @Component({
   selector: 'app-tecnologia-item',
@@ -8,5 +7,5 @@ import { Tecnologias } from 'src/app/interfaces/mock-tecnologia';
   styleUrls: ['./tecnologia-item.component.css']
 })
 export class TecnologiaItemComponent {
-  @Input() tecnologia: Tecnologia = Tecnologias[0]
+  @Input() tecnologia: Tecnologia | undefined = undefined;
 }
