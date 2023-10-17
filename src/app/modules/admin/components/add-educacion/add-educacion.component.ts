@@ -19,6 +19,7 @@ export class AddEducacionComponent {
     this.form = formBuilder.group({
       nombreInstituto: ['', Validators.required],
       titulo: ['', Validators.required],
+      link: [''],
       descripcion: [''],
       en_progreso: [false, Validators.required],
       fecha_inicio: [Date, Validators.required],

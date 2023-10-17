@@ -27,6 +27,7 @@ export class EditEducacionComponent {
     this.form = formBuilder.group({
       nombreInstituto: ['', Validators.required],
       titulo: ['', Validators.required],
+      link: [''],
       descripcion: [''],
       en_progreso: [false, Validators.required],
       fecha_inicio: [Date, Validators.required],
@@ -48,6 +49,7 @@ export class EditEducacionComponent {
       this.form.patchValue({
         nombreInstituto: this.educacion.nombreInstituto,
         titulo: this.educacion.titulo,
+        link: this.educacion.link,
         descripcion: this.educacion.descripcion,
         en_progreso: this.educacion.en_progreso,
         fecha_inicio: this.educacion.fecha_inicio,
