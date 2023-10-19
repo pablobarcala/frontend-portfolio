@@ -6,7 +6,7 @@ import { Tecnologia } from '../interfaces/Tecnologia';
   providedIn: 'root'
 })
 export class TecnologiaService {
-  apiUrl: string = "https://vps-3631176-x.dattaweb.com:8443/tecnologia"
+  apiUrl: string = "https://vps-3631176-x.dattaweb.com:443/tecnologia"
 
   constructor(private http: HttpClient) { }
 

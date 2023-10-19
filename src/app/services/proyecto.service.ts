@@ -6,7 +6,7 @@ import { Proyecto } from '../interfaces/Proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  apiUrl: string = "https://vps-3631176-x.dattaweb.com:8443/proyectos"
+  apiUrl: string = "https://vps-3631176-x.dattaweb.com:443/proyectos"
 
   constructor(private http: HttpClient) { }
 

@@ -6,7 +6,7 @@ import { Persona } from '../interfaces/Persona';
   providedIn: 'root'
 })
 export class PersonaService {
-  apiUrl: string = "https://vps-3631176-x.dattaweb.com:8443/personas"
+  apiUrl: string = "https://vps-3631176-x.dattaweb.com:443/personas"
 
   constructor(private http: HttpClient) { }
 

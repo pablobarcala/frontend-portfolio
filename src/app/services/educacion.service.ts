@@ -6,7 +6,7 @@ import { Educacion } from '../interfaces/Educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  apiUrl: string = "https://vps-3631176-x.dattaweb.com:8443/educacion"
+  apiUrl: string = "https://vps-3631176-x.dattaweb.com:443/educacion"
 
   constructor(private http: HttpClient) {}
 

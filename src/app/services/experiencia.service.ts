@@ -6,7 +6,7 @@ import { Experiencia } from '../interfaces/Experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  apiUrl: string = "https://vps-3631176-x.dattaweb.com:8443/experiencia"
+  apiUrl: string = "https://vps-3631176-x.dattaweb.com:443/experiencia"
 
   constructor(private http: HttpClient) { }
 
