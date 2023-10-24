@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Persona } from '../interfaces/Persona';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
-  apiUrl: string = "https://vps-3631176-x.dattaweb.com:443/personas"
+  apiUrl: string = environment.apiUrl + "/personas"
 
   constructor(private http: HttpClient) { }
 
