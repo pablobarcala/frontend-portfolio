@@ -8,7 +8,10 @@
             <li routerLink="tecnologias" routerLinkActive="selected">Tecnologías</li>
             <li routerLink="educacion" routerLinkActive="selected">Educación</li>
         </ul>
-        <button routerLink="/">Volver a la página</button>
+        <div class="botones">
+            <a routerLink="/"><button>Volver a la página</button></a>
+            <button (click)="logout()">Logout</button>
+        </div>
     </div>
     <div class="container">
         <router-outlet></router-outlet>

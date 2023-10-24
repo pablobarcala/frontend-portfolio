@@ -13,6 +13,10 @@
     margin-top: 2%;
 }
 
+label {
+    color: var(--text-color);
+}
+
 form {
     padding: 20px;
     display: flex;

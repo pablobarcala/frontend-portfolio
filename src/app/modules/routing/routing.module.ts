@@ -18,12 +18,14 @@ import { AddTecnologiasComponent } from '../admin/components/add-tecnologias/add
 import { EducacionComponent } from '../admin/components/educacion/educacion.component';
 import { EditEducacionComponent } from '../admin/components/edit-educacion/edit-educacion.component';
 import { AddEducacionComponent } from '../admin/components/add-educacion/add-educacion.component';
+import { AuthGuardService } from 'src/app/services/auth-guard.service';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'admin', component: AdminComponent, children: [
+    {path: '', redirectTo: 'login', pathMatch: 'full'},
     {path: 'login', component: LoginComponent},
-    {path: 'panel', component: DashboardComponent, children: [
+    {path: 'panel', component: DashboardComponent, canActivate: [AuthGuardService], children: [
       {path: 'info', component: InfoComponent, children: [
         {path:'edit-info/:id', component: EditInfoComponent}
       ]},

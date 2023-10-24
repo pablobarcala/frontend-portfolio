@@ -1,8 +1,10 @@
 <body class="container">
     <div class="login">
-        <form action="">
-            <input type="text" name="username" id="username" placeholder="Username">
-            <input type="password" name="password" id="password" placeholder="Password">
+        <form action="" [formGroup]="form" (submit)="login($event)">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" formControlName="nombreUsuario">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" formControlName="password">
             <button type="submit">LOGIN</button>
             <button routerLink="" class="volver" type="button">VOLVER</button>
         </form>
