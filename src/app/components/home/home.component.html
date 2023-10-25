@@ -3,6 +3,9 @@
     <div class="container">
         <app-header></app-header>
         <div class="main">
+            <div class="menu" *ngIf="menuOpen">
+                <app-opciones></app-opciones>
+            </div>
             <div class="seccion-nav">
                 <app-persona></app-persona>
                 <app-opciones></app-opciones>

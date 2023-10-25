@@ -19,5 +19,6 @@ export class OpcionItemComponent {
 
   navegar(opcion: string) {
     this.navService.navegar(opcion)
+    this.navService.toggleMenu()
   }
 }

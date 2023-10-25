@@ -51,6 +51,10 @@ app-header {
     flex-grow: 1;
 }
 
+.menu > app-opciones {
+    display: none;
+}
+
 .seccion-nav {
     position: sticky;
     top: 80px;
@@ -69,7 +73,7 @@ app-header {
     opacity: 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .background {
         padding: 10px;
         height: calc(100vh - 20px);
@@ -85,9 +89,15 @@ app-header {
         padding-top: 0;
     }
 
-    /* app-opciones {
+    .seccion-nav > app-opciones {
         display: none;
-    } */
+    }
+
+    .menu > app-opciones {
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
 
     .main {
         flex-direction: column;
@@ -99,7 +109,7 @@ app-header {
     }
 
     .seccion-nav {
-        height: 30vh;
+        height: 10vh;
     }
 }
 

@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class NavService {
   navOpcion: BehaviorSubject<string> = new BehaviorSubject<string>("Inicio");
   transicion: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  menuOpen: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() { }
 
@@ -16,6 +17,14 @@ export class NavService {
     setTimeout(() => {
       this.transicion.next(false)
     }, 1000);
+  }
+
+  toggleMenu() {
+    this.menuOpen.next(!this.menuOpen.value);
+  }
+
+  getMenu(){
+    return this.menuOpen.asObservable()
   }
 
   getNavOpcion() {

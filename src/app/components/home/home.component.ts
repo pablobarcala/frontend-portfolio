@@ -8,11 +8,13 @@ import { NavService } from 'src/app/services/nav.service';
 })
 export class HomeComponent implements AfterViewInit {
   navOpcion: string = ''
+  menuOpen: boolean = false
 
   constructor(
     private navService: NavService
   ){
     navService.getNavOpcion().subscribe(nav => this.navOpcion = nav)
+    navService.getMenu().subscribe(menu => this.menuOpen = menu)
   }
 
   ngAfterViewInit() {

@@ -1,4 +1,13 @@
 .container {
     padding: 20px 0;
-    width: 12%;
+    width: 30%;
+}
+
+@media (max-width: 550px) {
+    .container {
+        width: 100%;
+        padding: 20px 5px;
+        border-radius: 10px;
+        background-color: var(--light-color);
+    }
 }

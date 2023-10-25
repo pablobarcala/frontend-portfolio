@@ -34,6 +34,10 @@ export class HeaderComponent {
     })
   }
 
+  openMenu() {
+    this.navService.toggleMenu()
+  }
+
   onMouseOver() {
     const rect3 = document.getElementById("rect-3")
     rect3?.setAttribute("style", "width: 30px; transition: width 0.3s ease")
