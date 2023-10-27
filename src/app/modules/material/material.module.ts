@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDialogModule
   ],
   exports: [
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule { }

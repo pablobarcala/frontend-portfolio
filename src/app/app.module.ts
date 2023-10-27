@@ -25,6 +25,7 @@ import { ContactoItemComponent } from './components/contacto-item/contacto-item.
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
+import { ConfirmacionComponent } from './components/confirmacion/confirmacion.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { environment } from 'src/environments/environment';
     ProyectoItemComponent,
     ExperienciasComponent,
     ExperienciaItemComponent,
-    ContactoItemComponent
+    ContactoItemComponent,
+    ConfirmacionComponent
   ],
   imports: [
     BrowserModule,

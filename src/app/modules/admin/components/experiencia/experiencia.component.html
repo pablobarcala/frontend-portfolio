@@ -14,7 +14,7 @@
                     <button [routerLink]="['edit-experiencia', experiencia.id]">
                         <img src="../../../../../assets/icons/edit.svg" alt="Editar">
                     </button>
-                    <button>
+                    <button (click)="delete(experiencia.id)">
                         <img src="../../../../../assets/icons/delete.svg" alt="Eliminar">
                     </button>
                 </div>

@@ -22,4 +22,8 @@ export class ExperienciaService {
   editExperiencia(id: number, experiencia: Experiencia){
     return this.http.put(this.apiUrl + `/editar/${id}`, experiencia)
   }
+
+  deleteExperiencia(id: number) {
+    return this.http.delete(this.apiUrl + `/delete/${id}`)
+  }
 }

@@ -22,4 +22,8 @@ export class EducacionService {
   editEducacion(id: number, educacion: Educacion){
     return this.http.put(this.apiUrl + `/editar/${id}`, educacion)
   }
+
+  deleteEducacion(id: number) {
+    return this.http.delete(this.apiUrl + `/delete/${id}`)
+  }
 }

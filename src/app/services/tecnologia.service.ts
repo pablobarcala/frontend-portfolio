@@ -22,4 +22,8 @@ export class TecnologiaService {
   editTecnologia(id: number, tecnologia: Tecnologia){
     return this.http.put(this.apiUrl + `/editar/${id}`, tecnologia)
   }
+
+  deleteTecnologia(id: number) {
+    return this.http.delete(this.apiUrl + `/delete/${id}`)
+  }
 }

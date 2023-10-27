@@ -22,4 +22,8 @@ export class ProyectoService {
   editProyecto(id: number, proyecto: Proyecto){
     return this.http.put(this.apiUrl + `/editar/${id}`, proyecto)
   }
+
+  deleteProyecto(id: number) {
+    return this.http.delete(this.apiUrl + `/delete/${id}`)
+  }
 }
