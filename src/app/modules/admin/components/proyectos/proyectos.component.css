@@ -42,6 +42,11 @@ h2 {
     font-size: 1.8rem;
 }
 
+.head_item > img {
+    width: 10%;
+    border-radius: 15px;
+}
+
 .botones {
     margin: 15px 0;
 }

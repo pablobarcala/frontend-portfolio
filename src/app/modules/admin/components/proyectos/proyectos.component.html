@@ -9,6 +9,7 @@
     <div class="table" *ngIf="proyectos">
         <div class="elemento" *ngFor="let proyecto of proyectos">
             <div class="head_item">
+                <img *ngIf="proyecto.imagen" src="{{proyecto.imagen}}" alt="">
                 <h4>{{proyecto.nombreProyecto}}</h4>
                 <div class="botones">
                     <button [routerLink]="['edit-proyecto', proyecto.id]">
@@ -22,6 +23,10 @@
             <div class="item">
                 <h4>Descripción</h4>
                 <p>{{proyecto.descripcion}}</p>
+            </div>
+            <div class="item">
+                <h4>Imagen</h4>
+                <p>{{proyecto.imagen}}</p>
             </div>
             <div class="item">
                 <h4>Link</h4>

@@ -4,5 +4,6 @@ export interface Proyecto {
     fecha?: Date,
     descripcion?: string,
     link?: string,
+    imagen?: string,
     github?: string
 }

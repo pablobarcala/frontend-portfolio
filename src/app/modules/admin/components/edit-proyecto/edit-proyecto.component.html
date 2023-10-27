@@ -2,7 +2,7 @@
     <div class="form">
         <div class="input">
             <label for="nombreProyecto">Nombre del proyecto</label>
-            <input type="text" id="nombreProyecto" placeholder="Nombre" formControlName="nombreProyecto">
+            <input type="text" id="nombreProyecto" formControlName="nombreProyecto">
             <p
                 class="error"
                 *ngIf="form.get('nombreProyecto')?.hasError('required') && form.get('nombreProyecto')?.touched"
@@ -10,35 +10,23 @@
         </div>
         <div class="input">
             <label for="link">Link</label>
-            <input type="text" id="link" placeholder="Link" formControlName="link">
-            <p
-                class="error"
-                *ngIf="form.get('link')?.hasError('required') && form.get('link')?.touched"
-            >Se necesita un link</p>
+            <input type="text" id="link" formControlName="link">
         </div>
         <div class="input">
             <label for="github">Github</label>
-            <input type="text" id="github" placeholder="Github" formControlName="github">
-            <p
-                class="error"
-                *ngIf="form.get('github')?.hasError('required') && form.get('github')?.touched"
-            >Se necesita un Github</p>
+            <input type="text" id="github" formControlName="github">
         </div>
         <div class="input">
             <label for="fecha">Fecha</label>
-            <input type="date" id="fecha" placeholder="Fecha" formControlName="fecha">
-            <p
-                class="error"
-                *ngIf="form.get('fecha')?.hasError('required') && form.get('fecha')?.touched"
-            >Se necesita una fecha</p>
+            <input type="date" id="fecha" formControlName="fecha">
         </div>
         <div class="input">
             <label for="descripcion">Descripción</label>
-            <textarea id="descripcion" placeholder="Descripción" formControlName="descripcion"></textarea>
-            <p
-                class="error"
-                *ngIf="form.get('descripcion')?.hasError('required') && form.get('descripcion')?.touched"
-            >Se necesita una descripción</p>
+            <textarea id="descripcion" formControlName="descripcion"></textarea>
+        </div>
+        <div class="input">
+            <label for="imagen">Imagen</label>
+            <input type="file" id="imagen" (change)="getImage($event)">
         </div>
     </div>
     <div class="botones">

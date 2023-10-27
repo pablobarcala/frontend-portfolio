@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "pablobarcala-f9981"
+  },
+  "targets": {
+    "pablobarcala-f9981": {
+      "hosting": {
+        "portfolio": [
+          "pablobarcala-f9981"
+        ]
+      }
+    }
   }
 }

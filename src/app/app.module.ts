@@ -22,6 +22,9 @@ import { ProyectoItemComponent } from './components/proyecto-item/proyecto-item.
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
 import { ExperienciaItemComponent } from './components/experiencia-item/experiencia-item.component';
 import { ContactoItemComponent } from './components/contacto-item/contacto-item.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getStorage, provideStorage } from '@angular/fire/storage';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,9 @@ import { ContactoItemComponent } from './components/contacto-item/contacto-item.
     RoutingModule,
     AdminModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]
