@@ -1,5 +1,23 @@
-div {
+.proyecto {
     padding: 20px 0;
+}
+
+.imagen {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imagen > a > img {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.imagen > a > img:hover {
+    transform: scale(1.1);
+    filter: brightness(80%);
 }
 
 h4 {

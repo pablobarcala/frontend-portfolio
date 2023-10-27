@@ -1,7 +1,14 @@
-<div *ngIf="proyecto">
-    <h4>{{proyecto.nombreProyecto}}</h4>
-    <p>{{proyecto.link}}</p>
-    <div class="separate"></div>
-    <p>{{proyecto.descripcion}}</p>
-    <span *ngIf="proyecto.fecha">{{proyecto.fecha | date:'dd/MM/yyy'}}</span>
+<div class="proyecto" *ngIf="proyecto">
+    <div class="proyecto-info">
+        <h4>{{proyecto.nombreProyecto}}</h4>
+        <p *ngIf="!proyecto.imagen">{{proyecto.link}}</p>
+        <div class="separate"></div>
+        <p>{{proyecto.descripcion}}</p>
+        <span *ngIf="proyecto.fecha">{{proyecto.fecha | date:'dd/MM/yyy'}}</span>
+    </div>
+    <div class="imagen">
+        <a *ngIf="proyecto.imagen" target="_blank" href="{{proyecto.link}}">
+            <img src="{{proyecto.imagen}}" alt="Imagen de proyecto">
+        </a>
+    </div>
 </div>
