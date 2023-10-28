@@ -1,9 +1,9 @@
 <div class="proyecto" *ngIf="proyecto">
     <div class="proyecto-info">
         <h4>{{proyecto.nombreProyecto}}</h4>
-        <p *ngIf="!proyecto.imagen">{{proyecto.link}}</p>
+        <a *ngIf="!proyecto.imagen" href="{{proyecto.link}}" target="_blank">{{proyecto.link}}</a>
         <div class="separate"></div>
-        <p>{{proyecto.descripcion}}</p>
+        <p id="descripcion">{{proyecto.descripcion}}</p>
         <span *ngIf="proyecto.fecha">{{proyecto.fecha | date:'dd/MM/yyy'}}</span>
     </div>
     <div class="imagen">

@@ -29,6 +29,7 @@ export class EditProyectoComponent {
       this.filtrar(this.id)
     })
     this.form = formBuilder.group({
+      id: [this.id],
       nombreProyecto: ['', Validators.required],
       descripcion: [''],
       link: [''],
@@ -54,6 +55,7 @@ export class EditProyectoComponent {
         descripcion: this.proyecto.descripcion,
         link: this.proyecto.link,
         github: this.proyecto.github,
+        imagen: this.proyecto.imagen,
         fecha: this.proyecto.fecha
       })
     }
@@ -80,32 +82,25 @@ export class EditProyectoComponent {
         this.form.patchValue({
           imagen: this.imagenUrl
         })
-        if(this.proyecto){
-          this.proyectoService.editProyecto(this.proyecto.id, this.form.value).subscribe((resp: any) => {
-            if(resp){
-              alert("Se editó correctamente")
-                this.router.navigate(['/admin/panel/proyectos'])
-                .then(() => window.location.reload())
-              } else {
-                alert("Hubo algún error")
-              }
-            })
-        }
+        this.proyectoService.editProyecto(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
+          if(resp){
+            alert("Se editó correctamente")
+            this.router.navigate(['/admin/panel/proyectos'])
+            .then(() => window.location.reload())
+          } else {
+            alert("Hubo algún error")
+          }
+        })
       } else if(!this.editarFoto){
-        if(this.proyecto){
-          this.form.patchValue({
-            imagen: this.imagenUrl
-          })
-          this.proyectoService.editProyecto(this.proyecto.id, this.form.value).subscribe((resp: any) => {
-            if(resp){
-              alert("Se editó correctamente")
-                this.router.navigate(['/admin/panel/proyectos'])
-                .then(() => window.location.reload())
-              } else {
-                alert("Hubo algún error")
-              }
-            })
-        }
+        this.proyectoService.editProyecto(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
+          if(resp){
+            alert("Se editó correctamente")
+            this.router.navigate(['/admin/panel/proyectos'])
+            .then(() => window.location.reload())
+          } else {
+            alert("Hubo algún error")
+          }
+        })
       } else {
         alert("Espere")
       }
