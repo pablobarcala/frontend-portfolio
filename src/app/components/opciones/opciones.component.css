@@ -3,11 +3,26 @@
     width: 30%;
 }
 
+button {
+    display: none;
+}
+
 @media (max-width: 550px) {
     .container {
         width: 100%;
         padding: 20px 5px;
         border-radius: 10px;
-        background-color: var(--light-color);
+        background-color: var(--menu-bg-color);
+    }
+
+    button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        margin-top: 20px;
+    }
+    
+    svg {
+        cursor: pointer;
     }
 }

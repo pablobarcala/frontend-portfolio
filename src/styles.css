@@ -13,6 +13,7 @@
     --medium-color: #005e7c;
     --light-color: #0094c6;
     --theme: #040f16;
+    --menu-bg-color: #0d2d3f;
 }
 
 :root.light {
@@ -22,6 +23,7 @@
     --medium-color: #4A1942;
     --light-color: #8a1c7c;
     --theme: #eaeaea;
+    --menu-bg-color: #b1b1b1;
 }
 
 * {
