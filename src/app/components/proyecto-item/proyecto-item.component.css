@@ -5,6 +5,7 @@
 .imagen {
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .imagen > a > img {

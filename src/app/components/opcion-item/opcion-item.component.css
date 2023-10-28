@@ -31,3 +31,14 @@ li.selected span{
     z-index: 1;
     font-weight: 600;
 }
+
+@media (max-width: 550px) {
+    li {
+        margin-bottom: 10px;
+    }
+    
+    li span { 
+        font-size: 1.1rem;
+        margin-bottom: 0;
+    }
+}
