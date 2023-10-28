@@ -99,6 +99,13 @@ app-header {
         z-index: 1;
     }
 
+    .seccion-nav {
+        z-index: 0;
+        top: 60px;
+        background-color: var(--bg-color);
+        box-shadow: 0px 0px 20px var(--bg-color);
+    }
+
     .main {
         flex-direction: column;
     }
