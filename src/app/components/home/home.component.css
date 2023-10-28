@@ -76,7 +76,7 @@ app-header {
 @media (max-width: 550px) {
     .background {
         padding: 10px;
-        height: calc(100vh - 20px);
+        height: 98svh;
     }
 
     .cursor {
@@ -84,7 +84,7 @@ app-header {
     }
 
     .container {
-        height: calc(100vh - 210px);
+        height: 96svh;
         padding: 15px;
         padding-top: 0;
     }
