@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Storage, getDownloadURL, ref, uploadBytes } from '@angular/fire/storage';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/interfaces/Proyecto';
 import { Tecnologia } from 'src/app/interfaces/Tecnologia';

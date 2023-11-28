@@ -8,6 +8,7 @@
     <router-outlet></router-outlet>
     <table>
         <tr>
+            <th>Imagen</th>
             <th>Nombre</th>
             <th>Porcentaje</th>
             <th>Botones</th>
@@ -15,6 +16,9 @@
         <tr
             *ngFor="let tecnologia of tecnologias"
         >
+            <td>
+                <img src="{{tecnologia.imagen}}" alt="{{tecnologia.nombreTecnologia}}">
+            </td>
             <td>{{tecnologia.nombreTecnologia}}</td>
             <td>{{tecnologia.porcentaje}}%</td>
             <td class="botones">
