@@ -19,6 +19,7 @@ import { EditTecnologiasComponent } from './components/edit-tecnologias/edit-tec
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { AddEducacionComponent } from './components/add-educacion/add-educacion.component';
 import { EditEducacionComponent } from './components/edit-educacion/edit-educacion.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { EditEducacionComponent } from './components/edit-educacion/edit-educaci
   imports: [
     CommonModule,
     RoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ]
 })
 export class AdminModule { }

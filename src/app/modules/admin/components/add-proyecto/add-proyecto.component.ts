@@ -26,7 +26,7 @@ export class AddProyectoComponent {
       link: [''],
       github: [''],
       imagen: [''],
-      fecha: [Date]
+      fecha: ['']
     })
   }
 

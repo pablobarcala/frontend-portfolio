@@ -37,6 +37,10 @@
                 <p>{{proyecto.github}}</p>
             </div>
             <div class="item">
+                <h4>Tecnologias</h4>
+                <p *ngFor="let tecnologia of proyecto.tecnologias">{{tecnologia.nombreTecnologia}}</p>
+            </div>
+            <div class="item">
                 <h4>Fecha</h4>
                 <p>{{proyecto.fecha | date: 'dd/MM/yyyy'}}</p>
             </div>

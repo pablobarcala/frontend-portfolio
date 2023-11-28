@@ -4,7 +4,8 @@
         <a *ngIf="!proyecto.imagen" href="{{proyecto.link}}" target="_blank">{{proyecto.link}}</a>
         <div class="separate"></div>
         <p id="descripcion">{{proyecto.descripcion}}</p>
-        <span *ngIf="proyecto.fecha">{{proyecto.fecha | date:'dd/MM/yyy'}}</span>
+        <span *ngIf="proyecto.fecha">{{proyecto.fecha}}</span>
+        <p *ngFor="let tecnologia of proyecto.tecnologias">{{tecnologia.nombreTecnologia}}</p>
     </div>
     <div class="imagen">
         <a *ngIf="proyecto.imagen" target="_blank" href="{{proyecto.link}}">

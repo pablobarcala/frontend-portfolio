@@ -18,7 +18,7 @@
         </div>
         <div class="input">
             <label for="fecha">Fecha</label>
-            <input type="date" id="fecha" formControlName="fecha">
+            <input type="text" id="fecha" formControlName="fecha" placeholder="Ej. Marzo, 2022">
         </div>
         <div class="input">
             <label for="descripcion">Descripción</label>
@@ -27,6 +27,18 @@
         <div class="input">
             <label for="imagen">Imagen</label>
             <input type="file" id="imagen" (change)="getImage($event)">
+        </div>
+        <div class="input">
+            <mat-chip-listbox>
+                <mat-chip-row
+                    [editable]="true"
+                    (click)="toggleTecnologia(tecnologia)"
+                    *ngFor="let tecnologia of tecnologias"
+                    [ngClass]="{'selected': tecnologiasSelected.includes(tecnologia)}"
+                >
+                <img matChipAvatar src="../../../../../assets/icons/angular.svg" alt="Angular">
+                {{tecnologia.nombreTecnologia}}</mat-chip-row>
+            </mat-chip-listbox>
         </div>
     </div>
     <div class="botones">
