@@ -4,7 +4,7 @@
     padding: 15px;
     background: linear-gradient(-50deg, var(--light-color), var(--dark-color), var(--light-color));
     background-size: 200% 200%;
-    animation: gradient 8s linear infinite;
+    animation: gradient 5s linear infinite;
     color: var(--text-color);
     height: calc(100vh - 30px);
 }
