@@ -29,8 +29,9 @@ li.selected {
 button {
     cursor: pointer;
     border: none;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 10px;
     background-color: var(--light-color);
     margin-left: 10px;
 }
