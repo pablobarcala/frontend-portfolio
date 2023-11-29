@@ -8,6 +8,8 @@
     cursor: pointer;
     background-color: var(--light-color);
     padding: 5px;
+    display: flex;
+    align-items: center;
     border-radius: 50%;
     border: none;
 }

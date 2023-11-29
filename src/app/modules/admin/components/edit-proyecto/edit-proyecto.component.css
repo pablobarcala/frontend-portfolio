@@ -53,12 +53,6 @@ button {
     font-size: 0.8rem;
 }
 
-.checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .mat-mdc-standard-chip.selected {
     --mdc-chip-elevated-container-color: var(--light-color);
 }

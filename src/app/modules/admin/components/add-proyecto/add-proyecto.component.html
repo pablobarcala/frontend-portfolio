@@ -29,6 +29,18 @@
             <input type="file" id="imagen" (change)="getImage($event)">
         </div>
     </div>
+    <div class="input">
+        <mat-chip-listbox>
+            <mat-chip-row
+                [editable]="true"
+                (click)="toggleTecnologia(tecnologia)"
+                *ngFor="let tecnologia of tecnologias"
+                [ngClass]="{'selected': tecnologiasSelected.includes(tecnologia)}"
+            >
+            <img matChipAvatar src="{{tecnologia.imagen}}" alt="{{tecnologia.nombreTecnologia}}">
+            {{tecnologia.nombreTecnologia}}</mat-chip-row>
+        </mat-chip-listbox>
+    </div>
     <div class="botones">
         <button type="submit">Guardar</button>
         <button type="button" routerLink="/admin/panel/proyectos">Cerrar</button>

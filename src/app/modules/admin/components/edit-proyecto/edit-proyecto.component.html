@@ -36,7 +36,7 @@
                     *ngFor="let tecnologia of tecnologias"
                     [ngClass]="{'selected': tecnologiasSelected.includes(tecnologia)}"
                 >
-                <img matChipAvatar src="../../../../../assets/icons/angular.svg" alt="Angular">
+                <img matChipAvatar src="{{tecnologia.imagen}}" alt="{{tecnologia.nombreTecnologia}}">
                 {{tecnologia.nombreTecnologia}}</mat-chip-row>
             </mat-chip-listbox>
         </div>

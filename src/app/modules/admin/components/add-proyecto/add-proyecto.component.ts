@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { Storage, getDownloadURL, ref, uploadBytes } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Tecnologia } from 'src/app/interfaces/Tecnologia';
 import { ProyectoService } from 'src/app/services/proyecto.service';
+import { TecnologiaService } from 'src/app/services/tecnologia.service';
 
 @Component({
   selector: 'app-add-proyecto',
@@ -13,13 +15,19 @@ export class AddProyectoComponent {
   form: FormGroup;
   imagenUrl: string = ''
   cargarFoto: boolean = false
+  tecnologias: Tecnologia[] = []
+  tecnologiasSelected: Tecnologia[] = []
 
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
     private proyectoService: ProyectoService,
+    private tecnologiaService: TecnologiaService,
     private storage: Storage
   ){
+    tecnologiaService.getTecnologias().subscribe((tecnologias: any) => {
+      this.tecnologias = tecnologias
+    })
     this.form = formBuilder.group({
       nombreProyecto: ['', Validators.required],
       descripcion: [''],
@@ -41,6 +49,14 @@ export class AddProyectoComponent {
       this.imagenUrl = await getDownloadURL(imgRef)
       alert("Imagen guardada")
     })
+  }
+
+  toggleTecnologia(tecnologia: Tecnologia){
+    if(this.tecnologiasSelected.includes(tecnologia)){
+      this.tecnologiasSelected.splice(this.tecnologiasSelected.indexOf(tecnologia), 1)
+    } else {
+      this.tecnologiasSelected.push(tecnologia)
+    }
   }
 
   addProyecto(event: Event) {

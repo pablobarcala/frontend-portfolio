@@ -52,3 +52,7 @@ button {
     padding-bottom: 10px;
     font-size: 0.8rem;
 }
+
+.mat-mdc-standard-chip.selected {
+    --mdc-chip-elevated-container-color: var(--light-color);
+}
