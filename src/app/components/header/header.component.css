@@ -29,6 +29,11 @@ rect{
     justify-content: space-between;
 }
 
+.social-pc {
+    display: flex;
+    align-items: center;
+}
+
 .social-celu {
     display: none;
 }
@@ -72,6 +77,7 @@ span.nav-opcion.en-transicion {
 
     .social-celu {
         display: flex;
+        align-items: center;
         justify-content: flex-end;
     }
     
