@@ -5,7 +5,14 @@
         <div class="separate"></div>
         <p id="descripcion">{{proyecto.descripcion}}</p>
         <span *ngIf="proyecto.fecha">{{proyecto.fecha}}</span>
-        <p *ngFor="let tecnologia of proyecto.tecnologias">{{tecnologia.nombreTecnologia}}</p>
+        <mat-chip-listbox>
+            <mat-chip-row
+            *ngFor="let tecnologia of proyecto.tecnologias"
+            >
+            <img matChipAvatar src="{{tecnologia.imagen}}" alt="{{tecnologia.nombreTecnologia}}">
+            {{tecnologia.nombreTecnologia}}
+        </mat-chip-row>
+    </mat-chip-listbox>
     </div>
     <div class="imagen">
         <a *ngIf="proyecto.imagen" target="_blank" href="{{proyecto.link}}">

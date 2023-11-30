@@ -52,6 +52,15 @@ span {
     box-shadow: 0px 0px 2px var(--text-color);
 }
 
+.mat-mdc-chip-set {
+    margin: 20px 0;
+}
+
+.mat-mdc-standard-chip {
+    --mdc-chip-elevated-container-color: var(--text-color);
+    --mdc-chip-label-text-color: var(--bg-color);
+}
+
 .imagen {
     margin-top: 2%;
 }
