@@ -48,7 +48,7 @@ export class AddTecnologiasComponent {
         this.form.patchValue({
           imagen: this.imagenUrl
         })
-        this.tecnologiaService.editTecnologia(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
+        this.tecnologiaService.addTecnologia(this.form.value).subscribe((resp: any) => {
           if(resp){
             alert("Se creó correctamente")
             this.router.navigate(['/admin/panel/tecnologias'])
@@ -58,7 +58,7 @@ export class AddTecnologiasComponent {
           }
         })
       } else if(!this.editarFoto){
-        this.tecnologiaService.editTecnologia(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
+        this.tecnologiaService.addTecnologia(this.form.value).subscribe((resp: any) => {
           if(resp){
             alert("Se creó correctamente")
             this.router.navigate(['/admin/panel/tecnologias'])
