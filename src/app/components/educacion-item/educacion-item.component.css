@@ -23,13 +23,13 @@ p {
 }
 
 .fecha > span {
-    font-weight: 200;
+    font-weight: 600;
     font-size: 0.9rem;
     margin: 5px 0;
     color: #fff;
-    background-color: var(--dark-color);
+    background-color: var(--medium-color);
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0px 0px 2px var(--text-color);
 }
 
