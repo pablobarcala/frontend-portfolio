@@ -32,14 +32,24 @@ h4 {
     border: solid 0.5px var(--text-color);
 }
 
-p, a {
+.proyecto-info > p,
+.proyecto-info > a {
     margin-bottom: 10px;
 }
 
-a {
-    cursor: pointer;
+.proyecto-info > a {
     color: var(--text-color);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.fecha_icons {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.fecha_icons > a {
+    display: flex;
+    align-items: center;
 }
 
 span {

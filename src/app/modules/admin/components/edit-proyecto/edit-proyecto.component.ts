@@ -33,9 +33,6 @@ export class EditProyectoComponent {
       this.id = params['id'];
       this.filtrar(this.id)
     })
-    tecnologiaService.getTecnologias().subscribe((tecnologias: any) => {
-      this.tecnologias = tecnologias
-    })
     this.form = formBuilder.group({
       id: [this.id],
       nombreProyecto: ['', Validators.required],
@@ -53,6 +50,20 @@ export class EditProyectoComponent {
       let proyectos: Proyecto[] = resp
 
       this.proyecto = proyectos.find(p => p.id == id)
+
+      this.tecnologiaService.getTecnologias().subscribe((tecnologias: any) => {
+        this.tecnologias = tecnologias
+        
+        this.proyecto?.tecnologias?.forEach((tp: any) => {
+          tecnologias.forEach((t: any) => {
+            if(t.id == tp.id){
+              this.tecnologiasSelected.push(t)
+            }
+          })
+        })
+      })
+
+
       this.actualizarForm()
     })
   }
@@ -65,8 +76,7 @@ export class EditProyectoComponent {
         link: this.proyecto.link,
         github: this.proyecto.github,
         imagen: this.proyecto.imagen,
-        fecha: this.proyecto.fecha,
-        tecnologias: this.proyecto.tecnologias
+        fecha: this.proyecto.fecha
       })
     }
   }
@@ -99,35 +109,38 @@ export class EditProyectoComponent {
 
     console.log(this.form.value)
 
-    // if(this.form.valid){
-    //   if(this.imagenUrl != '' && this.editarFoto){
-    //     this.form.patchValue({
-    //       imagen: this.imagenUrl
-    //     })
-    //     this.proyectoService.editProyecto(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
-    //       if(resp){
-    //         alert("Se editó correctamente")
-    //         this.router.navigate(['/admin/panel/proyectos'])
-    //         .then(() => window.location.reload())
-    //       } else {
-    //         alert("Hubo algún error")
-    //       }
-    //     })
-    //   } else if(!this.editarFoto){
-    //     this.proyectoService.editProyecto(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
-    //       if(resp){
-    //         alert("Se editó correctamente")
-    //         this.router.navigate(['/admin/panel/proyectos'])
-    //         .then(() => window.location.reload())
-    //       } else {
-    //         alert("Hubo algún error")
-    //       }
-    //     })
-    //   } else {
-    //     alert("Espere")
-    //   }
-    // } else {
-    //   this.form.markAllAsTouched()
-    // }
+    if(this.form.valid){
+      if(this.imagenUrl != '' && this.editarFoto){
+        this.form.patchValue({
+          imagen: this.imagenUrl
+        })
+        this.proyectoService.editProyecto(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
+          if(resp){
+            alert("Se editó correctamente")
+            console.log(resp)
+            this.router.navigate(['/admin/panel/proyectos'])
+            .then(() => window.location.reload())
+          } else {
+            alert("Hubo algún error")
+          }
+        })
+      } else if(!this.editarFoto){
+        this.proyectoService.editProyecto(this.form.get('id')?.value, this.form.value).subscribe((resp: any) => {
+          if(resp){
+            alert("Se editó correctamente")
+            console.log(this.form.value)
+            console.log(resp)
+            // this.router.navigate(['/admin/panel/proyectos'])
+            // .then(() => window.location.reload())
+          } else {
+            alert("Hubo algún error")
+          }
+        })
+      } else {
+        alert("Espere")
+      }
+    } else {
+      this.form.markAllAsTouched()
+    }
   }
 }

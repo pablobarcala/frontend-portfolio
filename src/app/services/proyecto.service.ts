@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Proyecto } from '../interfaces/Proyecto';
 import { environment } from 'src/environments/environment';
+import { Tecnologia } from '../interfaces/Tecnologia';
 
 @Injectable({
   providedIn: 'root'

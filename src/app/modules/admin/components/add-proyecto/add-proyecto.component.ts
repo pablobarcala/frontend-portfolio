@@ -34,7 +34,8 @@ export class AddProyectoComponent {
       link: [''],
       github: [''],
       imagen: [''],
-      fecha: ['']
+      fecha: [''],
+      tecnologias: [[]]
     })
   }
 
@@ -61,6 +62,8 @@ export class AddProyectoComponent {
 
   addProyecto(event: Event) {
     event.preventDefault()
+
+    this.form.get('tecnologias')?.setValue(this.tecnologiasSelected)
 
     if(this.form.valid){
       if(this.imagenUrl != '' && this.cargarFoto){
