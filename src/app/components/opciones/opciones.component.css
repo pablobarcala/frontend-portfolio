@@ -7,22 +7,39 @@ button {
     display: none;
 }
 
+.social-celu {
+    display: none;
+}
+
 @media (max-width: 550px) {
     .container {
-        width: 100%;
+        width: 140%;
         padding: 20px 5px;
-        border-radius: 10px;
+        border-radius: 20px;
         background-color: var(--menu-bg-color);
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 2rem;
     }
 
     button {
         display: block;
         background-color: transparent;
         border: none;
-        margin-top: 20px;
     }
     
     svg {
         cursor: pointer;
+    }
+
+    .social-celu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
     }
 }

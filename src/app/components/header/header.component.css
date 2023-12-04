@@ -34,12 +34,7 @@ rect{
     align-items: center;
 }
 
-.social-celu {
-    display: none;
-}
-
-.icons > .social-pc > a,
-.social-celu > a {
+.icons > .social-pc > a {
     padding-left: 20px;
 }
 
@@ -50,6 +45,10 @@ span.nav-opcion{
 
 span.nav-opcion.en-transicion {
     animation: girar 1s ease forwards;
+}
+
+.tema_cel {
+    display: none;
 }
 
 /* ---------- PARA MOVILES ---------- */
@@ -71,18 +70,15 @@ span.nav-opcion.en-transicion {
         padding-right: 0;
     }
 
-    .social-pc {
+    .social-pc,
+    .tema_pc {
         display: none;
     }
 
-    .social-celu {
+    .tema_cel {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-    }
-    
-    .social-celu svg {
-        transform: translateY(20%);
     }
 }
 
